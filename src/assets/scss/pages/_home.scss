@@ -83,7 +83,11 @@
       text-align: center;
       color: $white !important;
       border-color: $white !important;
-      min-width: 200px;
+      min-width: 220px;
+
+      @include r(1572) {
+        min-width: 200px;
+      }
 
       @include r(768) {
         min-width: 160px;
