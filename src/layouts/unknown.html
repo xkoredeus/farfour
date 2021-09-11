@@ -1,0 +1,23 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+    <main role="main" class="layout layout--inner">
+        {{> preloader}}
+        <header class="header">
+        </header>
+        <div class="layout__in">
+        </div>
+        {{> svg}}
+        {{> popups}}
+    </main>
+    {{> scripts}}
+</body>
+</html>

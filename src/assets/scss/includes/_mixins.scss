@@ -1,0 +1,80 @@
+@mixin ct {
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin cv {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin ovl {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+@mixin ease {
+  transition: .4s all ease;
+}
+
+
+@mixin hoverOpacity {
+  &:hover {
+    opacity: .6;
+  }
+}
+
+@mixin ease-in-out {
+  transition: .6s all ease-in-out;
+}
+
+@mixin cubic {
+  transition: all .6s cubic-bezier(.23,1,.32,1);
+}
+
+@mixin cubic-long {
+  transition: all 1s cubic-bezier(.23,1,.32,1);
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content
+  }
+}
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin pattern {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  fill: #B9B9B9;
+  opacity: .2;
+
+  @include r(1572) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include r(1200) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include r(768) {
+    width: 100px;
+    height: 100px;
+  }
+}

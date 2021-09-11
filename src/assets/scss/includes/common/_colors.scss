@@ -1,0 +1,39 @@
+$dark: #181818;
+$dark1: #222222;
+$dark2: #3C3C3C;
+$white: #ffffff;
+
+$blueGray: #6E8A99;
+$gray: #F3F5F6;
+$tr: transparent;
+
+
+.color-white {
+  color: $white;
+}
+
+.color-blueGray {
+  color: $blueGray;
+}
+
+.background-gray {
+  background-color: $gray;
+}
+
+.background-image {
+  @include cv;
+}
+
+.background-blueGray {
+  background-color: $blueGray;
+}
+
+.hoverOpacity {
+  @include hoverOpacity;
+}
+
+.color-white-hover {
+  &:hover {
+    color: $white;
+  }
+}

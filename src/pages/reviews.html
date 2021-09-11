@@ -1,0 +1,75 @@
+<section class="offer" style="background-image: url('{{root}}assets/img/offer-reviews.jpg');">
+    <div class="offer__in">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 offer__content">
+                    <div class="section__title section__title--h1 tac">Отзывы</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer__bottom">
+        <div class="container">
+            <div class="crumbs font-small">
+                <a class="crumbs__item color-white" href="#">Главная</a>
+                <a class="crumbs__item color-white" href="#">Об отеле </a>
+                <span class="crumbs__item">Отзывы</span>
+            </div>
+
+            <button class="offer__scrolldown js-offer-scroll js-prevent-default">
+                <svg width="29" height="15">
+                    <use xlink:href="#chevron"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<div class="content">
+    <section class="section--padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="section__title section__title--h4 tac mb-2 mb-md-3 mb-xl-4">Мы благодарим своих Гостей за выбор нашего отеля. Вы всегда можете оставить отзыв о наших услугах и сервисе</div>
+                    <div class="d-flex justify-content-center">
+                        <a class="button" href="#">Оставить отзыв</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section--padding-small">
+        <div class="container">
+            <div class="font-medium">
+                <div>Всего отзывов: 47</div>
+                <div class="section__hr my-3 my-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+                <div class="col-md-6 mb-3 mb-md-4 mb-xl-5">
+                    {{> review}}
+                </div>
+            </div>
+            {{> pagination}}
+        </div>
+    </div>
+</div>

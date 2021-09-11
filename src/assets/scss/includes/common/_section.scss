@@ -1,0 +1,184 @@
+.section {
+  &--wide {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include r(1200) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &--padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &-big {
+      @include rmin(1200) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+
+    &-medium {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      @include r(600) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      @include r(400) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    &-small {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @include r(768) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @include r(972) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @include r(600) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include r(400) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-family: $font-tSans;
+    line-height: 1.1;
+
+    &--h1 {
+      font-size: 3.2rem;
+
+      @include r(1520) {
+        font-size: 3rem;
+      }
+
+      @include r(960) {
+        font-size: 2.8rem;
+      }
+
+      @include r(600) {
+        font-size: 2.1rem;
+      }
+
+      @include r(375) {
+        font-size: 1.7143rem;
+      }
+    }
+
+    &--h2 {
+      font-size: 2.6rem;
+
+      @include r(1520) {
+        font-size: 2.4rem;
+      }
+
+      @include r(960) {
+        font-size: 2rem;
+      }
+
+      @include r(600) {
+        font-size: 1.86rem;
+      }
+
+      @include r(375) {
+        font-size: 1.4286rem;
+      }
+    }
+
+    &--h3 {
+      font-size: 2rem;
+
+      @include r(1520) {
+        font-size: 1.8rem;
+      }
+
+      @include r(960) {
+        font-size: 1.4rem;
+      }
+
+      @include r(600) {
+        font-size: 1.2rem;
+      }
+
+      @include r(375) {
+        font-size: 1rem;
+      }
+    }
+
+    &--h4 {
+      font-size: 1.6rem;
+
+      @include r(1572) {
+        font-size: 1.2rem;
+      }
+      @include r(960) {
+        font-size: 1rem;
+      }
+      @include r(600) {
+        font-size: 0.9rem;
+      }
+    }
+
+    &--with-decoration {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &-decoration {
+      display: inline-block;
+      width: 160px;
+      height: 2px;
+      background-color: $dark;
+
+      @include r(1200) {
+        width: 100px;
+      }
+
+      @include r(768) {
+        width: 50px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+  }
+
+  &__hr {
+    height: 2px;
+    width: 160px;
+    background-color: $dark;
+
+    @include r(1200) {
+      width: 140px;
+    }
+
+    @include r(768) {
+      width: 100px;
+    }
+  }
+}
+
+.with-pattern {
+  position: relative;
+}

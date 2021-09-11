@@ -1,0 +1,80 @@
+button {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $tr;
+}
+
+.button {
+  position: relative;
+  font-size: $font-small;
+  color: $white;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  @include ease;
+  padding: 15px 30px;
+  background-color: $dark;
+
+  &:hover {
+    color: $white;
+    background-color: $dark2;
+  }
+
+  @include r(960) {
+    padding: 12px 20px;
+  }
+
+  &--white {
+    color: $dark;
+    background-color: $white;
+
+    svg {
+      stroke: $dark;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark2;
+
+      svg {
+        stroke: $white;
+      }
+    }
+  }
+
+  &--transparent {
+    background-color: $tr;
+    &:hover {
+      background-color: $tr;
+    }
+  }
+
+  //&--icon {
+  //  @include flex-center;
+  //}
+  //
+  //&--outlined {
+  //  color: $dark;
+  //  background-color: $tr;
+  //  border: 1px solid $dark;
+  //
+  //  &:hover {
+  //    background-color: $dark;
+  //    border-color: $dark;
+  //  }
+  //}
+  //
+  //&--blue {
+  //  color: $dark;
+  //  &:hover {
+  //    color: $dark;
+  //  }
+  //}
+  //
+  //&.w-sm-100 {
+  //  @include r(540) {
+  //    width: 100%;
+  //  }
+  //}
+}

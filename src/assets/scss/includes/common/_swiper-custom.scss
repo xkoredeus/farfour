@@ -1,0 +1,77 @@
+.swiper {
+  &-button {
+    &-prev,
+    &-next {
+      position: relative;
+      border: 1px solid $dark;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      opacity: .6;
+      @include ease;
+      @include flex-center;
+
+      @include r(1572) {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include r(1200) {
+        width: 30px;
+        height: 30px;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        stroke: $dark;
+        @include ease;
+
+        @include r(1200) {
+          max-height: 12px;
+          stroke-width: 2;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.swiper-button-disabled {
+        opacity: .1;
+      }
+    }
+
+    &-prev {
+      left: 0;
+      top: 0;
+      margin: 0;
+
+
+      svg {
+        transform: translateX(-2px);
+
+        @include r(768) {
+          transform: translateX(-1px);
+        }
+      }
+    }
+
+    &-next {
+      right: 0;
+      top: 0;
+      margin: 0;
+
+
+      svg {
+        transform: translateX(2px);
+
+        @include r(768) {
+          transform: translateX(1px);
+        }
+      }
+    }
+  }
+}

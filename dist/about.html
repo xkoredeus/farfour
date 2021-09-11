@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4B77E4">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css"></head>
+
+<body>
+
+    <main role="main" class="layout">
+        <style>
+            .preloader__wrp {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                min-height: 300px;
+                width: 100vw;
+                background-color: #ffffff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                z-index: 100;
+            }
+        
+            .preloader {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 50px;
+                width: 50px;
+                margin: -25px 0 0 -25px;
+            }
+        
+            .preloader span {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #181818;
+                -webkit-animation: preloader 1.7s infinite ease-in-out both;
+                animation: preloader 1.7s infinite ease-in-out both;
+                margin-right: 5px;
+            }
+        
+            .preloader span:nth-child(1) {
+                left: 0;
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+            }
+        
+            .preloader span:nth-child(2) {
+                left: 15px;
+                -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s;
+            }
+        
+            .preloader span:nth-child(3) {
+                left: 30px;
+                -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+            }
+        
+            .preloader span:nth-child(4) {
+                left: 45px;
+                -webkit-animation-delay: 0.1s;
+                animation-delay: 0.1s;
+            }
+        
+            @-webkit-keyframes preloader {
+                0%, 80%, 100% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                40% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes preloader {
+                0%, 80%, 100% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                40% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        </style>
+        <div class="preloader__wrp">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>        <div class="layout__in">
+            <header class="header">
+                <div class="container">
+                    <div class="header__in d-flex justify-content-between align-items-center">
+                        <button class="header__burger js-menu font-small" type="button">
+                            <span class="mr-2 mr-md-3">Menu</span>
+                            <span class="burger">
+                                <span class="burger__in">
+                                    <span class="burger__line burger__line--1"></span>
+                                    <span class="burger__line burger__line--2"></span>
+                                    <span class="burger__line burger__line--3"></span>
+                                </span>
+                            </span>
+                        </button>
+                        <a class="header__logo" href="#">
+                            <img class="header__logo-picture" src="assets/img/logo.png" alt="Logotype">
+                        </a>
+                        <div class="header__nav d-flex align-items-center font-small">
+                            <a class="header__link mr-3 mr-md-4 d-none d-sm-inline" href="#">Контакты</a>
+                            <div class="header__language-wrapper">
+                                <button class="header__language header__link d-flex align-items-center">
+                                    <span class="mr-2">Русский</span>
+                                    <svg class="header__language-icon" width="12" height="6px">
+                                        <use xlink:href="#chevron"></use>
+                                    </svg>
+                                </button>
+                                <div class="header__language-list">
+                                    <button class="header__language header__link">Английский</button>
+                                    <button class="header__language header__link">Немецкий</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>            <section class="offer" style="background-image: url('assets/img/offer-about.jpg');">
+                <div class="offer__in">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2 offer__content">
+                                <div class="section__title section__title--h1 tac mb-3 mb-md-4">Об отеле</div>
+                                <hr class="offer__hr mb-3 mb-md-4">
+                                <div class="about__nav d-flex flex-wrap justify-content-center justify-content-md-between align-items-center">
+                                    <a class="about__nav-link font-small color-white color-white-hover hoverOpacity mr-2" href="#">Фотогалерея</a>
+                                    <a class="about__nav-link font-small color-white color-white-hover hoverOpacity mr-2" href="#">Специальные предложения</a>
+                                    <a class="about__nav-link font-small color-white color-white-hover hoverOpacity mr-2" href="#">Отзывы</a>
+                                    <a class="about__nav-link font-small color-white color-white-hover hoverOpacity mr-2" href="#">Новости</a>
+                                    <a class="about__nav-link font-small color-white color-white-hover hoverOpacity" href="#">Карьера</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="offer__bottom">
+                    <div class="container">
+                        <div class="crumbs font-small">
+                            <a class="crumbs__item color-white" href="#">Главная</a>
+                            <span class="crumbs__item">Об отеле</span>
+                        </div>
+            
+                        <button class="offer__scrolldown js-offer-scroll js-prevent-default">
+                            <svg width="29" height="15">
+                                <use xlink:href="#chevron"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="content">
+                <section class="section--padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2">
+                                <div class="about__quote section__title section__title--h4 tac">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam”</div>
+                                <div class="about__quote-decoration"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--wide">
+                    <div class="section--padding background-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 offset-xl-1">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Lorem ipsum</div>
+                                    <div class="section__title section__title--h3 mb-2 mb-md-3 mb-xl-4">Сonsectetur adipiscing</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. Nulla pharetra egestas mi vestibulum eu ac varius ultricies. In tortor aliquet massa elit tellus in. Nibh commodo elementum, viverra et aliquam mus vel. Interdum mattis sit varius vitae libero leo. </p>
+                                </div>
+                                <div class="col-xl-5 offset-xl-1">
+                                    <div class="image image--wide" style="background-image: url('assets/img/about-info.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--padding">
+                    <div class="container">
+                        <div class="row mb-3 mb-md-4 mb-xl-5">
+                            <div class="col-md-7 mb-3 mb-md-0">
+                                <div class="section__title section__title--h1 section__title--with-decoration">
+                                    <span class="section__title-decoration mr-3 mr-md-4"></span>
+                                    <span>Фотогалерея</span>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mt-xl-2">
+                                <div class="font-small font-mRegular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-9 with-pattern">
+                                <div class="about-slider__wrapper">
+                                    <div class="about-slider js-about-slider swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="about-slide" style="background-image: url('assets/img/gallery-1.jpg');"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="about-slide" style="background-image: url('assets/img/gallery-2.jpg');"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="about-slider__pattern">
+                                    <use xlink:href="#pattern"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="about-slider__bottom d-flex justify-content-start justify-content-sm-center mt-3 mt-md-4 mt-xl-5">
+                            <a class="button" href="#">Все фотографии</a>
+                            <div class="about-slider__navigation">
+                                <button class="about-slider__navigation-button mr-3 swiper-button-prev js-about-slider-prev">
+                                    <svg width="11" height="21">
+                                        <use xlink:href="#chevron-left"></use>
+                                    </svg>
+                                </button>
+                                <button class="aabout-slider__navigation-button swiper-button-next js-about-slider-next">
+                                    <svg width="11" height="21">
+                                        <use xlink:href="#chevron-right"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="background-gray">
+                    <section class="tenders section--padding">
+                        <div class="container">
+                            <div class="section__title section__title--h1 tac mb-3 mb-md-4 mb-xl-5">Специальные предложения</div>
+                            <div class="row">
+                                <div class="col-md-5 mb-3 mb-md-0">
+                                    <div class="tenders__item" style="background-image: url('assets/img/tender-1.jpg');">
+                                        <div class="tender__title section__title section__title--h3 mb-3 mb-md-4">Кешбек 20% по карте “Мир”</div>
+                                        <a class="button button--white" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="tenders__item" style="background-image: url('assets/img/tender-2.jpg');">
+                                        <div class="tender__title section__title section__title--h3 mb-3 mb-md-4">Тариф “Длительное проживание”</div>
+                                        <a class="button button--white" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="d-flex justify-content-center mt-3 mt-md-4 mt-xl-5">
+                            <a class="button" href="#">Все спецпредложения</a>
+                        </div>
+                    </section>    </div>
+                <section class="section--padding">
+                    <div class="container">
+                        <div class="section__title section__title--h1  section__title--with-decoration mb-3 mb-md-4 mb-xl-5">
+                            <span class="section__title-decoration mr-3 mr-md-4"></span>
+                            <span>Отзывы</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-4">
+                                <div class="review">
+                                    <div class="review-picture">М</div>
+                                    <div class="review-info">
+                                        <div class="review-info__title mb-2">Марина Петрова</div>
+                                        <div class="d-flex align-items-start align-items-end mb-2 mb-md-3">
+                                            <div class="d-flex align-items-center mr-2 mr-md-3">
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star-outlined"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="font-small font-mRegular">25.03.21</div>
+                                        </div>
+                                        <div class="font-small font-mRegular lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. </div>
+                                    </div>
+                                </div>                </div>
+                            <div class="col-md-6 mb-3 mb-md-4">
+                                <div class="review">
+                                    <div class="review-picture">М</div>
+                                    <div class="review-info">
+                                        <div class="review-info__title mb-2">Марина Петрова</div>
+                                        <div class="d-flex align-items-start align-items-end mb-2 mb-md-3">
+                                            <div class="d-flex align-items-center mr-2 mr-md-3">
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star-outlined"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="font-small font-mRegular">25.03.21</div>
+                                        </div>
+                                        <div class="font-small font-mRegular lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. </div>
+                                    </div>
+                                </div>                </div>
+                            <div class="col-md-6 mb-3 mb-md-4">
+                                <div class="review">
+                                    <div class="review-picture">М</div>
+                                    <div class="review-info">
+                                        <div class="review-info__title mb-2">Марина Петрова</div>
+                                        <div class="d-flex align-items-start align-items-end mb-2 mb-md-3">
+                                            <div class="d-flex align-items-center mr-2 mr-md-3">
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star-outlined"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="font-small font-mRegular">25.03.21</div>
+                                        </div>
+                                        <div class="font-small font-mRegular lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. </div>
+                                    </div>
+                                </div>                </div>
+                            <div class="col-md-6 mb-3 mb-md-4">
+                                <div class="review">
+                                    <div class="review-picture">М</div>
+                                    <div class="review-info">
+                                        <div class="review-info__title mb-2">Марина Петрова</div>
+                                        <div class="d-flex align-items-start align-items-end mb-2 mb-md-3">
+                                            <div class="d-flex align-items-center mr-2 mr-md-3">
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                                <svg class="review-info__rating">
+                                                    <use xlink:href="#star-outlined"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="font-small font-mRegular">25.03.21</div>
+                                        </div>
+                                        <div class="font-small font-mRegular lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. </div>
+                                    </div>
+                                </div>                </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 mt-md-4 mt-xl-5">
+                            <a class="button" href="#">Все отзывы</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--padding background-gray with-pattern">
+                    <div class="container">
+                        <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5 tac">
+                            Новости
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4 mb-md-0">
+                                <div class="news">
+                                    <div class="news-picture mb-1 mb-sm-2" style="background-image: url('assets/img/news-1.jpg');"></div>
+                                    <div class="font-small font-mRegular mb-1 mb-sm-2">18.08.21</div>
+                                    <div class="mb-2 mb-sm-3">Lorem ipsum dolor sit amett, consectetur adipiscing elit</div>
+                                    <a class="link hoverOpacity" href="#">подробнее</a>
+                                </div>                </div>
+                            <div class="col-sm-6 col-md-4 mb-4 mb-md-0">
+                                <div class="news">
+                                    <div class="news-picture mb-1 mb-sm-2" style="background-image: url('assets/img/news-1.jpg');"></div>
+                                    <div class="font-small font-mRegular mb-1 mb-sm-2">18.08.21</div>
+                                    <div class="mb-2 mb-sm-3">Lorem ipsum dolor sit amett, consectetur adipiscing elit</div>
+                                    <a class="link hoverOpacity" href="#">подробнее</a>
+                                </div>                </div>
+                            <div class="col-sm-6 col-md-4 mb-4 mb-md-0">
+                                <div class="news">
+                                    <div class="news-picture mb-1 mb-sm-2" style="background-image: url('assets/img/news-1.jpg');"></div>
+                                    <div class="font-small font-mRegular mb-1 mb-sm-2">18.08.21</div>
+                                    <div class="mb-2 mb-sm-3">Lorem ipsum dolor sit amett, consectetur adipiscing elit</div>
+                                    <a class="link hoverOpacity" href="#">подробнее</a>
+                                </div>                </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 mt-md-4 mt-xl-5">
+                            <a class="button" href="#">Все новости</a>
+                        </div>
+                    </div>
+                    <svg class="directions__pattern">
+                        <use xlink:href="#pattern"></use>
+                    </svg>
+                </section>
+                <section class="section--padding about-career">
+                    <div class="section--padding">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 order-2 order-xl-1 mt-3 mt-xl-0">
+                                    <div class="image image--wide" style="background-image: url('assets/img/about-career.jpg');"></div>
+                                </div>
+                                <div class="col-xl-5 offset-xl-1 order-1 order-xl-2">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Карьера</div>
+                                    <div class="section__title section__title--h3 mb-2 mb-md-3 mb-xl-4">Сonsectetur adipiscing</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper. Nulla pharetra egestas mi vestibulum eu ac varius ultricies. In tortor aliquet massa elit tellus in. Nibh commodo elementum, viverra et aliquam mus vel. Interdum mattis sit varius vitae libero leo. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="footer font-small">
+                <div class="footer__top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-2 mb-3 mb-xl-0">
+                                <a class="footer__logo" href="#">
+                                    <img src="assets/img/logo-black.png" alt="Logotype">
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Об отеле</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Политика конфиденциальности</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Бронирования</a>
+                                    <a class="footer__link" href="#">Карта сайта</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Номера</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Ресторан</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Фитнес со SPA-зонами</a>
+                                    <a class="footer__link" href="#">Услуги</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Мероприятия</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Контакты</a>
+                                    <a class="footer__link mb-1 mb-md-2" href="#">Карьера</a>
+                                    <a class="footer__link" href="#">Новости</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 mt-4 mt-xl-0">
+                                <div class="footer__col">
+                                    <div class=" mb-2 mb-md-3">Подписаться на новости</div>
+                                    <form class="footer__form mb-3 mb-md-4">
+                                        <input type="email" placeholder="E-mail">
+                                        <button class="button" type="submit">OK</button>
+                                    </form>
+            
+                                    <div class="mb-1 font-xsmall">ООО «Фарфор»</div>
+                                    <div class="mb-1 font-xsmall">ИНН 6670503240</div>
+                                    <div class="mb-1 font-xsmall">КПП 667001001</div>
+                                    <div class="font-xsmall">Юр. адрес: 620078, Свердловская область,
+                                        г.&nbsp;Екатеринбург, ул.&nbsp;Мира, стр&nbsp;39, ком&nbsp;22</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom font-small">
+                    <div class="container">
+                        <div class="footer__copyrights">© Не является публичной офертой. все права защищены. 2021</div>
+                        <div class="footer__social">
+                            <a class="footer__social-link" href="#">
+                                <img src="assets/img/in.png" alt="In">
+                            </a>
+                            <a class="footer__social-link" href="#">
+                                <img src="assets/img/fb.png" alt="Fb">
+                            </a>
+                            <a class="footer__social-link" href="#">
+                                <img src="assets/img/yu.png" alt="Yu">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>        </div>
+        <svg width="0" height="0" class="svg-sprite">
+            <symbol id="chevron" viewBox="0 0 31 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L15.5 15.5L30 1" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="chevron-left" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 1L1 10.5L10 20" stroke-linecap="round"/>
+            </symbol>
+            <symbol id="chevron-right" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L10 10.5L1 20" stroke-linecap="round"/>
+            </symbol>
+        
+        
+            <symbol id="pattern" viewBox="0 0 391 391" xmlns="http://www.w3.org/2000/svg">
+                <path d="M390.524 20.4537C381.724 13.5565 371.735 10.7025 361.033 7.61068C353.898 5.47017 346.763 3.56748 339.865 0.237793H370.07C376.968 2.3783 383.865 4.75666 390.286 8.79985V20.4537H390.524Z" />
+                <path d="M390.524 75.3935C387.194 63.9775 383.627 53.2749 374.589 44.475C365.076 34.9617 353.184 31.3941 340.817 27.8266C327.736 24.0213 314.179 19.9781 302.763 8.562C300.147 5.94582 297.769 3.09181 295.866 0.237793H308.233C308.709 0.713462 309.185 1.18915 309.66 1.66482C319.174 11.1782 331.066 14.7457 343.433 18.3132C356.514 22.1186 370.07 26.1618 381.486 37.5779C385.054 41.1454 388.146 45.1885 390.524 49.2317V75.3935Z" />
+                <path d="M390.524 136.755C390.286 136.517 390.286 136.517 390.524 136.755C378.87 125.101 375.065 111.782 371.26 98.7013C367.692 86.3339 364.125 74.4422 354.611 64.9288C345.098 55.4154 333.206 51.8479 320.839 48.2804C307.758 44.475 294.201 40.4318 282.785 29.0157C273.985 20.2159 269.704 10.4646 266.375 0.475586H276.602C279.456 8.32413 283.023 15.697 289.445 22.1186C298.958 31.6319 310.85 35.1995 323.217 38.767C336.298 42.5723 349.855 46.6155 361.271 58.0315C372.687 69.4476 376.73 83.0042 380.535 96.0851C383.152 105.123 385.768 113.685 390.524 121.296V136.755Z" />
+                <path d="M390.524 170.052C383.389 166.96 376.492 163.155 370.07 156.733C358.654 145.317 354.611 131.76 350.806 118.679C347.238 106.312 343.671 94.4204 334.157 84.907C324.644 75.3936 312.752 71.8261 300.385 68.2586C287.304 64.4532 273.747 60.41 262.331 48.9939C250.915 37.5779 246.872 24.0213 243.066 10.9404C241.877 7.37289 240.926 3.56752 239.737 0H249.964C250.915 2.61618 251.629 5.47018 252.342 8.08636C255.91 20.4538 259.477 32.3455 268.99 41.8589C278.504 51.3723 290.396 54.9398 302.763 58.5073C315.844 62.3127 329.4 66.3559 340.817 77.7719C352.233 89.188 356.276 102.745 360.081 115.825C363.649 128.193 367.216 140.085 376.729 149.598C380.773 153.641 385.292 156.733 390.286 159.111V170.052H390.524Z" />
+                <path d="M390.524 196.689C389.573 196.451 388.859 196.214 387.908 195.976C374.827 192.17 361.27 188.127 349.854 176.711C338.438 165.295 334.395 151.739 330.59 138.658C327.022 126.29 323.455 114.398 313.941 104.885C304.428 95.3717 292.536 91.8042 280.169 88.2366C267.088 84.4313 253.531 80.3881 242.115 68.972C230.699 57.556 226.656 43.9994 222.85 30.9185C219.521 19.7403 216.429 9.03771 208.818 0H220.948C226.656 9.03771 229.51 18.7889 232.364 28.3023C235.931 40.6697 239.499 52.5615 249.012 62.0748C258.526 71.5882 270.417 75.1557 282.785 78.7233C295.866 82.5286 309.422 86.5718 320.838 97.9879C332.254 109.404 336.298 122.961 340.103 136.041C343.671 148.409 347.238 160.301 356.751 169.814C366.265 179.327 377.919 182.895 390.286 186.462V196.689H390.524Z" />
+                <path d="M390.524 224.754C383.389 220.948 375.779 218.57 367.692 216.192C354.611 212.386 341.055 208.343 329.639 196.927C318.223 185.511 314.18 171.954 310.374 158.874C306.807 146.506 303.239 134.614 293.726 125.101C284.212 115.588 272.321 112.02 259.953 108.453C246.872 104.647 233.316 100.604 221.9 89.188C210.484 77.7719 206.44 64.2153 202.635 51.1344C199.067 38.767 195.5 26.8754 185.987 17.362C176.473 7.84859 164.582 4.28107 152.214 0.713547C151.501 0.475713 150.549 0.237835 149.836 0H178.376C183.37 2.61618 188.365 5.94585 192.884 10.4647C204.3 21.8808 208.343 35.4373 212.148 48.5182C215.716 60.8856 219.283 72.7774 228.797 82.2908C238.31 91.8042 250.202 95.3717 262.569 98.9392C275.65 102.745 289.207 106.788 300.623 118.204C312.039 129.62 316.082 143.176 319.888 156.257C323.455 168.625 327.023 180.516 336.536 190.03C346.049 199.543 357.941 203.111 370.308 206.678C376.968 208.581 383.865 210.721 390.287 213.576V224.754H390.524Z" />
+                <path d="M390.524 265.899C388.146 261.38 385.292 257.099 381.486 253.056C371.973 243.543 360.081 239.975 347.714 236.408C334.633 232.602 321.076 228.559 309.66 217.143C298.244 205.727 294.201 192.17 290.396 179.09C286.828 166.722 283.261 154.83 273.747 145.317C264.234 135.804 252.342 132.236 239.975 128.669C226.894 124.863 213.337 120.82 201.921 109.404C190.505 97.9879 186.462 84.4313 182.657 71.3504C179.089 58.983 175.522 47.0913 166.008 37.5779C156.495 28.0645 144.603 24.497 132.236 20.9295C119.155 17.1241 105.598 13.0809 94.1823 1.66487C93.7067 1.1892 92.9931 0.475669 92.5175 0H107.263C115.587 5.94587 125.101 8.56209 134.852 11.4161C147.933 15.2215 161.489 19.2646 172.906 30.6807C184.322 42.0967 188.365 55.6533 192.17 68.7342C195.738 81.1016 199.305 92.9934 208.819 102.507C218.332 112.02 230.224 115.588 242.591 119.155C255.672 122.961 269.229 127.004 280.645 138.42C292.061 149.836 296.104 163.392 299.909 176.473C303.477 188.841 307.044 200.732 316.558 210.246C326.071 219.759 337.963 223.327 350.33 226.894C363.411 230.7 376.968 234.743 388.384 246.159C389.097 246.872 389.811 247.824 390.524 248.537V265.899Z" />
+                <path d="M390.524 337.249C383.865 327.736 381.01 317.271 377.919 307.282C374.351 294.915 370.784 283.023 361.27 273.51C351.757 263.996 339.865 260.429 327.498 256.861C314.417 253.056 300.86 249.013 289.444 237.597C278.028 226.181 273.985 212.624 270.18 199.543C266.612 187.176 263.045 175.284 253.531 165.771C244.018 156.257 232.126 152.69 219.759 149.122C206.678 145.317 193.121 141.274 181.705 129.858C170.289 118.442 166.246 104.885 162.441 91.8041C158.873 79.4367 155.306 67.545 145.792 58.0316C136.279 48.5182 124.387 44.9507 112.02 41.3831C98.9387 37.5778 85.3821 33.5347 73.9661 22.1186C67.3067 15.4592 63.0257 7.8485 60.1717 0.237793H70.8742C73.2526 5.70799 76.5823 10.7025 81.1011 15.2213C90.6145 24.7347 102.506 28.3022 114.874 31.8698C127.955 35.6751 141.511 39.7183 152.927 51.1344C164.343 62.5504 168.386 76.107 172.192 89.1879C175.759 101.555 179.327 113.447 188.84 122.96C198.354 132.474 210.245 136.041 222.613 139.609C235.694 143.414 249.25 147.457 260.666 158.874C272.082 170.29 276.125 183.846 279.931 196.927C283.498 209.294 287.066 221.186 296.579 230.7C306.093 240.213 317.984 243.78 330.352 247.348C343.433 251.153 356.989 255.196 368.405 266.613C379.821 278.029 383.865 291.585 387.67 304.666C388.621 308.234 389.81 311.801 391 315.131V337.249H390.524Z" />
+                <path d="M390.524 375.303C385.768 372.687 381.249 369.595 376.968 365.314C365.552 353.898 361.509 340.341 357.703 327.26C354.136 314.893 350.568 303.001 341.055 293.488C331.541 283.974 319.65 280.407 307.282 276.839C294.201 273.034 280.645 268.991 269.229 257.575C257.813 246.159 253.769 232.602 249.964 219.521C246.397 207.154 242.829 195.262 233.316 185.749C223.802 176.235 211.911 172.668 199.543 169.1C186.462 165.295 172.906 161.252 161.49 149.836C150.074 138.42 146.03 124.863 142.225 111.782C138.658 99.4149 135.09 87.5232 125.577 78.0098C116.063 68.4964 104.171 64.9289 91.8041 61.3614C78.7232 57.556 65.1666 53.5128 53.7506 42.0968C42.3345 30.6807 38.2914 17.1241 34.486 4.04322C34.0103 2.61621 33.7725 1.18917 33.2968 0H43.5237L43.9994 1.42702C47.5669 13.7944 51.1344 25.6862 60.6478 35.1996C70.1612 44.7129 82.0528 48.2805 94.4202 51.848C107.501 55.6533 121.058 59.6965 132.474 71.1125C143.89 82.5286 147.933 96.0852 151.738 109.166C155.306 121.533 158.873 133.425 168.387 142.939C177.9 152.452 189.792 156.02 202.159 159.587C215.24 163.392 228.797 167.436 240.213 178.852C251.629 190.268 255.672 203.824 259.477 216.905C263.045 229.273 266.613 241.164 276.126 250.678C285.639 260.191 297.531 263.759 309.898 267.326C322.979 271.131 336.536 275.175 347.952 286.591C359.368 298.007 363.411 311.563 367.217 324.644C370.784 337.012 374.352 348.903 383.865 358.417C386.005 360.557 388.146 362.46 390.524 363.887V375.303Z" />
+                <path d="M382.438 390.524H362.222C360.319 389.097 358.417 387.433 356.514 385.53C345.098 374.114 341.055 360.557 337.249 347.476C333.682 335.109 330.114 323.217 320.601 313.704C311.088 304.19 299.196 300.623 286.828 297.055C273.748 293.25 260.191 289.207 248.775 277.791C237.359 266.375 233.316 252.818 229.51 239.737C225.943 227.37 222.375 215.478 212.862 205.965C203.349 196.451 191.457 192.884 179.089 189.316C166.009 185.511 152.452 181.468 141.036 170.052C129.62 158.636 125.577 145.079 121.771 131.998C118.204 119.631 114.636 107.739 105.123 98.2257C95.6094 88.7123 83.7178 85.1448 71.3504 81.5773C58.2695 77.772 44.7129 73.7288 33.2968 62.3127C21.8808 50.8966 17.8375 37.3401 14.0321 24.2592C11.416 15.6971 9.03771 7.37287 4.75668 0H15.697C19.0267 7.13504 21.1672 14.2701 23.3078 21.643C26.8753 34.0104 30.4428 45.9021 39.9562 55.4155C49.4696 64.9289 61.3613 68.4964 73.7287 72.0639C86.8096 75.8693 100.366 79.9124 111.782 91.3285C123.198 102.745 127.241 116.301 131.047 129.382C134.614 141.749 138.182 153.641 147.695 163.155C157.209 172.668 169.1 176.235 181.468 179.803C194.549 183.608 208.105 187.652 219.521 199.068C230.937 210.484 234.981 224.04 238.786 237.121C242.353 249.488 245.921 261.38 255.434 270.894C264.948 280.407 276.839 283.974 289.207 287.542C302.288 291.347 315.844 295.391 327.26 306.807C338.676 318.223 342.72 331.779 346.525 344.86C350.092 357.228 353.66 369.119 363.173 378.633C369.119 384.103 375.779 387.67 382.438 390.524Z" />
+                <path d="M336.774 390.524H325.595C321.79 383.152 319.65 375.303 317.271 367.692C313.704 355.325 310.136 343.433 300.623 333.92C291.109 324.406 279.218 320.839 266.85 317.271C253.769 313.466 240.213 309.423 228.797 298.007C217.381 286.591 213.338 273.034 209.532 259.953C205.965 247.586 202.397 235.694 192.884 226.181C183.37 216.667 171.479 213.1 159.111 209.532C146.03 205.727 132.474 201.684 121.058 190.268C109.642 178.852 105.599 165.295 101.793 152.214C98.2257 139.847 94.6581 127.955 85.1448 118.442C75.6314 108.928 63.7396 105.361 51.3722 101.793C38.2913 97.9879 24.7347 93.9447 13.3187 82.5286C7.13498 76.3449 3.09185 69.2099 0 62.0748V30.4429C1.18917 34.2482 2.37835 38.0535 3.56752 41.6211C7.13504 53.9885 10.7026 65.8802 20.2159 75.3936C29.7293 84.907 41.6209 88.4745 53.9883 92.042C67.0692 95.8474 80.6258 99.8906 92.0419 111.307C103.458 122.723 107.501 136.279 111.307 149.36C114.874 161.728 118.442 173.619 127.955 183.133C137.468 192.646 149.36 196.214 161.728 199.781C174.808 203.586 188.365 207.63 199.781 219.046C211.197 230.462 215.24 244.018 219.046 257.099C222.613 269.467 226.181 281.358 235.694 290.872C245.207 300.385 257.099 303.953 269.467 307.52C282.547 311.326 296.104 315.369 307.52 326.785C318.936 338.201 322.979 351.757 326.785 364.838C329.401 373.876 331.779 382.676 336.774 390.524Z" />
+                <path d="M307.996 390.524H297.769C297.531 389.573 297.293 388.86 297.055 387.908C293.488 375.541 289.92 363.649 280.407 354.136C270.894 344.622 259.002 341.055 246.634 337.487C233.553 333.682 219.997 329.639 208.581 318.223C197.165 306.807 193.122 293.25 189.316 280.169C185.749 267.802 182.181 255.91 172.668 246.397C163.154 236.883 151.263 233.316 138.895 229.748C125.814 225.943 112.258 221.9 100.842 210.484C89.4257 199.068 85.3826 185.511 81.5772 172.43C78.0097 160.063 74.4422 148.171 64.9288 138.658C55.4154 129.144 43.5237 125.577 31.1563 122.009C20.6916 118.917 9.75122 115.826 0 108.69V95.8474C9.51338 105.361 21.405 108.928 33.7724 112.496C46.8533 116.301 60.4099 120.344 71.8259 131.76C83.242 143.176 87.2853 156.733 91.0906 169.814C94.6581 182.181 98.2257 194.073 107.739 203.586C117.252 213.1 129.144 216.667 141.512 220.235C154.592 224.04 168.149 228.083 179.565 239.499C190.981 250.915 195.024 264.472 198.83 277.553C202.397 289.92 205.965 301.812 215.478 311.326C224.991 320.839 236.883 324.406 249.251 327.974C262.332 331.779 275.888 335.823 287.304 347.239C298.72 358.655 302.763 372.211 306.569 385.292C307.044 386.957 307.52 388.622 307.996 390.524Z" />
+                <path d="M281.596 390.524H271.132C268.753 384.816 265.424 379.346 260.429 374.352C250.916 364.838 239.024 361.271 226.657 357.703C213.576 353.898 200.019 349.855 188.603 338.439C177.187 327.023 173.144 313.466 169.338 300.385C165.771 288.018 162.203 276.126 152.69 266.613C143.177 257.099 131.285 253.532 118.918 249.964C105.837 246.159 92.2801 242.116 80.8641 230.7C69.448 219.284 65.4047 205.727 61.5994 192.646C58.0318 180.279 54.4643 168.387 44.9509 158.874C35.4376 149.36 23.5458 145.793 11.1784 142.225C7.61088 141.274 3.80559 140.085 0.238068 138.895V128.431C4.51909 130.096 9.27581 131.523 13.7947 132.712C26.8756 136.517 40.4321 140.56 51.8482 151.976C63.2643 163.392 67.3074 176.949 71.1127 190.03C74.6803 202.397 78.2478 214.289 87.7612 223.802C97.2746 233.316 109.166 236.883 121.534 240.451C134.615 244.256 148.171 248.299 159.587 259.715C171.003 271.131 175.046 284.688 178.852 297.769C182.419 310.136 185.987 322.028 195.5 331.541C205.014 341.055 216.905 344.622 229.273 348.19C242.354 351.995 255.91 356.038 267.326 367.455C274.223 374.352 278.505 382.676 281.596 390.524Z" />
+                <path d="M249.727 390.524H235.694C226.894 383.865 216.905 380.773 206.441 377.681C193.36 373.876 179.803 369.833 168.387 358.417C156.971 347.001 152.928 333.444 149.122 320.363C145.555 307.996 141.987 296.104 132.474 286.591C122.961 277.077 111.069 273.51 98.7016 269.942C85.6207 266.137 72.0642 262.094 60.6481 250.678C49.2321 239.262 45.1888 225.705 41.3834 212.624C37.8159 200.257 34.2484 188.365 24.735 178.852C17.6 171.717 9.27578 167.911 0.238068 165.057V154.83C11.1785 158.16 22.1189 162.441 31.6323 171.954C43.0483 183.371 47.0915 196.927 50.8968 210.008C54.4643 222.375 58.0318 234.267 67.5452 243.781C77.0586 253.294 88.9504 256.861 101.318 260.429C114.399 264.234 127.955 268.277 139.371 279.693C150.787 291.11 154.83 304.666 158.636 317.747C162.203 330.114 165.771 342.006 175.284 351.52C184.798 361.033 196.689 364.6 209.057 368.168C222.138 371.973 235.694 376.016 247.11 387.433C247.824 388.384 248.775 389.335 249.727 390.524Z" />
+                <path d="M195.262 390.524H165.057C159.112 387.67 153.404 384.103 148.171 378.871C136.755 367.455 132.712 353.898 128.907 340.817C125.339 328.45 121.771 316.558 112.258 307.045C102.745 297.531 90.8531 293.964 78.4857 290.396C65.4048 286.591 51.8482 282.548 40.4322 271.132C29.0161 259.716 24.9728 246.159 21.1675 233.078C17.6 220.711 14.0324 208.819 4.51906 199.305C3.09205 197.878 1.66508 196.689 0.238068 195.5V183.608C4.04342 185.987 7.8488 188.841 11.4163 192.408C22.8324 203.824 26.8755 217.381 30.6809 230.462C34.2484 242.829 37.8159 254.721 47.3293 264.234C56.8427 273.748 68.7344 277.315 81.1018 280.883C94.1827 284.688 107.739 288.731 119.155 300.147C130.571 311.563 134.615 325.12 138.42 338.201C141.987 350.568 145.555 362.46 155.068 371.973C164.582 381.487 176.473 385.054 188.841 388.622C190.981 389.097 193.122 389.811 195.262 390.524Z" />
+                <path d="M133.425 390.524H121.058C114.636 381.249 111.783 371.022 108.929 361.033C105.361 348.666 101.793 336.774 92.2801 327.26C82.7667 317.747 70.8749 314.18 58.5075 310.612C45.4266 306.807 31.8701 302.764 20.454 291.347C9.03795 279.931 4.99482 266.375 1.18946 253.294L0.238068 250.44V224.278C5.23259 232.84 7.84875 241.878 10.4649 250.678C14.0324 263.045 17.6 274.937 27.1133 284.45C36.6267 293.964 48.5185 297.531 60.8859 301.099C73.9668 304.904 87.5234 308.947 98.9394 320.363C110.355 331.779 114.399 345.336 118.204 358.417C121.534 369.833 124.863 381.011 133.425 390.524Z" />
+                <path d="M101.794 390.524H91.5669C90.6156 387.432 89.6642 384.341 88.7129 381.249C85.1453 368.881 81.5778 356.99 72.0644 347.476C62.5511 337.963 50.6593 334.395 38.2919 330.828C25.211 327.022 11.8922 322.979 0.476135 311.801V296.342C2.37881 299.434 4.51944 302.05 7.13562 304.904C16.649 314.417 28.5406 317.985 40.908 321.552C53.9889 325.358 67.5455 329.401 78.9616 340.817C90.3776 352.233 94.4209 365.79 98.2262 378.87C99.1776 382.438 100.367 386.481 101.794 390.524Z" />
+                <path d="M75.394 390.524H65.1672C62.3132 382.2 58.5079 374.352 51.8485 367.455C42.3351 357.941 30.4434 354.374 18.076 350.806C12.1301 349.141 6.18417 347.239 0.476135 344.86V334.158C6.89767 337.25 13.795 339.39 20.93 341.293C34.0109 345.098 47.5675 349.141 58.9835 360.557C67.5456 369.595 72.0643 380.06 75.394 390.524Z" />
+                <path d="M46.1401 390.524H34.0106C33.2971 389.573 32.3457 388.622 31.3943 387.671C22.3566 378.633 11.6541 375.065 0.238068 371.736V361.509C0.238068 361.509 0.23801 361.509 0.475844 361.509C13.5567 365.314 27.1133 369.357 38.5294 380.773C41.3834 383.627 43.7618 386.957 46.1401 390.524Z" />
+                <path d="M3.80559 390.524H0.238068V388.86C1.42724 389.335 2.61641 389.811 3.80559 390.524Z" />
+            </symbol>
+        
+            <symbol id="star" viewBox="0 0 35 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 0L22.3551 10.8175L34.1435 12.0922L25.3557 20.0525L27.7862 31.6578L17.5 25.76L7.21376 31.6578L9.64427 20.0525L0.85651 12.0922L12.6449 10.8175L17.5 0Z" />
+            </symbol>
+            <symbol id="star-outlined" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1.2211L18.7054 9.47689L18.8227 9.73844L19.1078 9.76926L28.1045 10.7421L21.3978 16.8173L21.1853 17.0097L21.2441 17.2903L23.099 26.1474L15.2487 21.6462L15 21.5036L14.7513 21.6462L6.90096 26.1474L8.7559 17.2903L8.81467 17.0097L8.60219 16.8173L1.89548 10.7421L10.8922 9.76926L11.1773 9.73844L11.2946 9.47689L15 1.2211Z" stroke="#181818"/>
+            </symbol>
+        
+        
+            <symbol id="slider-prev" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28C56 43.464 43.464 56 28 56ZM32.7214 38.4183C33.1039 38.8167 33.0909 39.4497 32.6925 39.8322C32.2941 40.2147 31.6611 40.2018 31.2786 39.8034L20.6119 28.6923L19.9471 27.9997L20.6119 27.3072L31.2786 16.1961C31.6611 15.7977 32.2941 15.7847 32.6925 16.1672C33.0909 16.5497 33.1039 17.1827 32.7214 17.5811L22.7195 27.9997L32.7214 38.4183Z" />
+            </symbol>
+            <symbol id="slider-next" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28 55.9998C43.464 55.9998 56 43.4637 56 27.9998C56 12.5358 43.464 -0.000244141 28 -0.000244141C12.536 -0.000244141 0 12.5358 0 27.9998C0 43.4637 12.536 55.9998 28 55.9998ZM22.3899 38.4181C22.0075 38.8165 22.0204 39.4496 22.4188 39.8321C22.8172 40.2145 23.4502 40.2016 23.8327 39.8032L34.4994 28.6921L35.1642 27.9996L34.4994 27.307L23.8327 16.1959C23.4502 15.7975 22.8172 15.7846 22.4188 16.1671C22.0204 16.5495 22.0075 17.1826 22.3899 17.581L32.3918 27.9996L22.3899 38.4181Z" />
+            </symbol>
+        </svg>        <div id="popup--price" style="display: none">
+            <div class="popup__wrapper">
+                <div class="popup__container">
+                    <div class="tac">
+                        <div class="popup__title section__title section__title--h3 mb-2 mb-md-2">Узнать стоимость</div>
+                        <div class="popup__subtitle mb-2 mb-md-3">Заполните поля и наш оператор савяжется с вами в ближайшее время</div>
+                    </div>
+                    <form class="popup__fields d-flex flex-column align-items-center">
+                        <input type="text" placeholder="ФИО*" required>
+                        <input type="tel" placeholder="Телефон*" required>
+                        <input type="email" placeholder="E-mail">
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="popup--call" style="display: none">
+            <div class="popup__wrapper">
+                <div class="popup__container">
+                    <div class="tac">
+                        <div class="popup__title section__title section__title--h3 mb-2 mb-md-2">Заказать обратный звонок</div>
+                        <div class="popup__subtitle mb-2 mb-md-3">Заполните поля и наш оператор савяжется с вами в ближайшее время</div>
+                    </div>
+                    <form class="popup__fields d-flex flex-column align-items-center">
+                        <input type="text" placeholder="ФИО*" required>
+                        <input type="tel" placeholder="Телефон*" required>
+                        <input type="email" placeholder="E-mail">
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="popup--question" style="display: none">
+            <div class="popup__wrapper">
+                <div class="popup__container">
+                    <div class="tac">
+                        <div class="popup__title section__title section__title--h3 mb-2 mb-md-2">Задать вопрос</div>
+                        <div class="popup__subtitle mb-2 mb-md-3">Заполните поля и наш оператор савяжется с вами в ближайшее время</div>
+                    </div>
+                    <form class="popup__fields d-flex flex-column align-items-center">
+                        <input type="text" placeholder="ФИО*" required>
+                        <input type="tel" placeholder="Телефон*" required>
+                        <textarea placeholder="Ваш вопрос" rows="3"></textarea>
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>    </main>
+    <script src="assets/js/app.js"></script></body>
+</html>

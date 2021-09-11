@@ -1,0 +1,46 @@
+input,
+textarea,
+select {
+  color: $dark;
+  font-size: 0.9rem;
+  padding: 0 0 10px;
+  border: none;
+  border-bottom: 1px solid #7B7B7B;
+  background: $tr;
+  @include ease;
+  outline: none;
+}
+option {
+  color: $dark;
+}
+textarea {
+  resize: none !important;
+  overflow: hidden;
+  &::placeholder {
+    color: $dark;
+  }
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: $dark;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  color: $dark;
+  border-color: $dark;
+
+  &::placeholder {
+    color: $tr;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
