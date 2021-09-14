@@ -22256,6 +22256,10 @@ a.mdc-list-item {
   font-size: 0.64rem;
 }
 
+.font-xregular {
+  font-size: 0.88rem;
+}
+
 .font-medium {
   font-size: 1.08rem;
 }
@@ -22292,6 +22296,10 @@ a.mdc-list-item {
 
 .color-white-hover:hover {
   color: #ffffff;
+}
+
+.color-darkGray {
+  color: #777777;
 }
 
 .tac {
@@ -22360,6 +22368,14 @@ select {
   -webkit-transition: .4s all ease;
   transition: .4s all ease;
   outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    padding: 0 0 5px;
+  }
 }
 
 option {
@@ -22462,6 +22478,54 @@ input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
           appearance: textfield;
+}
+
+.input,
+.textarea {
+  font-family: "Montserrat-Regular";
+  font-size: 0.72rem;
+  border: none;
+  padding: 28px 30px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .input,
+  .textarea {
+    padding: 15px 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .input,
+  .textarea {
+    padding: 10px 16px;
+  }
+}
+
+.input--white,
+.textarea--white {
+  background-color: #ffffff;
+}
+
+.input--white::-webkit-input-placeholder,
+.textarea--white::-webkit-input-placeholder {
+  color: #777777 !important;
+}
+
+.input--white::-moz-placeholder,
+.textarea--white::-moz-placeholder {
+  color: #777777 !important;
+}
+
+.input--white::-ms-input-placeholder,
+.textarea--white::-ms-input-placeholder {
+  color: #777777 !important;
+}
+
+.input--white::placeholder,
+.textarea--white::placeholder {
+  color: #777777 !important;
 }
 
 button {
@@ -25420,6 +25484,11 @@ a:hover {
   }
 }
 
+.image--small__wrapper--right::before {
+  right: auto;
+  left: 40%;
+}
+
 .image--wide {
   height: calc(100% + 140px + 240px);
   -webkit-transform: translateY(calc(calc(140px + 240px) / -2));
@@ -26152,6 +26221,8 @@ a:hover {
 }
 
 .popup__subtitle {
+  font-family: "Montserrat-Regular";
+  font-size: 0.64rem;
   max-width: 415px;
   margin-left: auto;
   margin-right: auto;
@@ -26170,6 +26241,7 @@ a:hover {
 .popup__fields input,
 .popup__fields textarea,
 .popup__fields select {
+  font-size: 0.72rem;
   width: 100%;
 }
 
@@ -27505,4 +27577,92 @@ div.pagination ul.pagination li.control_next:hover a svg {
     width: 100px;
     height: 100px;
   }
+}
+
+.contacts__map {
+  height: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contacts__map {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .contacts__address {
+    line-height: 1.7;
+  }
+}
+
+.contacts__form {
+  max-width: 570px;
+}
+
+.contacts__form-policy {
+  max-width: 450px;
+}
+
+.balloon__content {
+  position: relative;
+  padding-bottom: 10px;
+  -webkit-transform: translateY(-50px) translateX(-10px);
+          transform: translateY(-50px) translateX(-10px);
+}
+
+.balloon__in {
+  position: relative;
+  background-color: #ffffff;
+  width: 200px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+@media only screen and (max-width: 1200px) {
+  .balloon__in {
+    width: 140px;
+    height: 70px;
+  }
+}
+
+.balloon__in svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .balloon__in svg {
+    width: 100px;
+    height: 60px;
+  }
+}
+
+.balloon__in::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: -6px;
+  left: 20px;
+}
+
+.mapboxgl-ctrl-logo {
+  z-index: -1 !important;
+  position: absolute;
+  bottom: -200px;
+  pointer-events: none;
 }

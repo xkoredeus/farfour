@@ -16,6 +16,8 @@
   }
 
   &__subtitle {
+    font-family: $font-mRegular;
+    font-size: $font-xsmall;
     max-width: 415px;
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +33,7 @@
     input,
     textarea,
     select {
+      font-size: $font-small;
       width: 100%;
     }
   }

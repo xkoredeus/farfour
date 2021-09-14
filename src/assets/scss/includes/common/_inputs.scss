@@ -9,6 +9,10 @@ select {
   background: $tr;
   @include ease;
   outline: none;
+
+  @include r(768) {
+    padding: 0 0 5px;
+  }
 }
 option {
   color: $dark;
@@ -48,4 +52,29 @@ input::-webkit-calendar-picker-indicator {
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+.input,
+.textarea {
+  font-family: $font-mRegular;
+  font-size: $font-small;
+  border: none;
+  padding: 28px 30px;
+  width: 100%;
+
+  @include r(1200) {
+    padding: 15px 25px;
+  }
+
+  @include r(768) {
+    padding: 10px 16px;
+  }
+
+  &--white {
+    background-color: $white;
+
+    &::placeholder {
+      color: $darkGray !important;
+    }
+  }
 }

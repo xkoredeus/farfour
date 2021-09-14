@@ -12,7 +12,7 @@
 
 <body>
 
-    <main role="main" class="layout layout--inner">
+    <main role="main" class="layout">
         <style>
             .preloader__wrp {
                 position: fixed;
@@ -116,10 +116,326 @@
                 <span></span>
                 <span></span>
             </div>
-        </div>        <header class="header">
-        </header>
-        <div class="layout__in">
-        </div>
+        </div>        <div class="layout__in">
+            <header class="header">
+                <div class="container">
+                    <div class="header__in d-flex justify-content-between align-items-center">
+                        <button class="header__burger js-menu font-small" type="button">
+                            <span class="mr-2 mr-md-3 d-none d-md-inline">Menu</span>
+                            <span class="burger">
+                                <span class="burger__in">
+                                    <span class="burger__line burger__line--1"></span>
+                                    <span class="burger__line burger__line--2"></span>
+                                    <span class="burger__line burger__line--3"></span>
+                                </span>
+                            </span>
+                        </button>
+                        <a class="header__logo" href="#">
+                            <svg class="header__logo-icon" width="371" height="143">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="header__nav d-flex align-items-center font-small">
+                            <a class="header__link mr-3 mr-md-4 d-none d-sm-inline" href="#">Контакты</a>
+                            <div class="header__language-wrapper d-none d-sm-block">
+                                <button class="header__language header__link d-flex align-items-center">
+                                    <span class="mr-2">Русский</span>
+                                    <svg class="header__language-icon" width="12" height="6px">
+                                        <use xlink:href="#chevron"></use>
+                                    </svg>
+                                </button>
+                                <div class="header__language-list">
+                                    <button class="header__language header__link">Английский</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="container">
+                        <div class="menu__in">
+                            <div class="mb-3 d-sm-none">
+                                <button class="menu__language menu__language--active">RU</button>
+                                <button class="menu__language">EN</button>
+                            </div>
+                            <div class="row mb-4 mb-sm-3 mb-md-5">
+                                <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+                                    <div class="menu__dropdown-wrapper menu__dropdown-wrapper--bt">
+                                        <div class="menu__link-wrapper">
+                                            <a class="menu__link section__title section__title--h4" href="#">Об отеле</a>
+                                            <button class="menu__link-button js-toggle-menu-dropdown">
+                                                <span class="menu__link-button-in"></span>
+                                            </button>
+                                        </div>
+                                        <div class="menu__dropdown mt-2 mt-sm-3 mt-md-4">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <a class="menu__link font-small font-mRegular" href="#">Спецпредложения</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Фотогалерея</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Отзывы</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Карьера</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Новости</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+                                    <div class="menu__dropdown-wrapper">
+                                        <div class="menu__link-wrapper">
+                                            <a class="menu__link section__title section__title--h4" href="#">Номера</a>
+                                            <button class="menu__link-button js-toggle-menu-dropdown">
+                                                <span class="menu__link-button-in"></span>
+                                            </button>
+                                        </div>
+                                        <div class="menu__dropdown mt-2 mt-sm-3 mt-md-4">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <a class="menu__link font-small font-mRegular" href="#">Suite</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">De Luxe</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Duplex</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Family Room</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Новости</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+                                    <div class="menu__dropdown-wrapper">
+                                        <div class="menu__link-wrapper">
+                                            <a class="menu__link section__title section__title--h4" href="#">Отель</a>
+                                            <button class="menu__link-button js-toggle-menu-dropdown">
+                                                <span class="menu__link-button-in"></span>
+                                            </button>
+                                        </div>
+                                        <div class="menu__dropdown mt-2 mt-sm-3 mt-md-4">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <a class="menu__link font-small font-mRegular" href="#">Бронированиe</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Услуги</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Ресторан</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Фитнес со SPA-зонами</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Мероприятия</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+                                    <div class="menu__dropdown-wrapper">
+                                        <div class="menu__link-wrapper">
+                                            <a class="menu__link section__title section__title--h4" href="#">Контакты</a>
+                                            <button class="menu__link-button js-toggle-menu-dropdown">
+                                                <span class="menu__link-button-in"></span>
+                                            </button>
+                                        </div>
+                                        <div class="menu__dropdown mt-2 mt-sm-3 mt-md-4">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <a class="menu__link font-small font-mRegular" href="#">Политика конфиденциальности</a>
+                                                <a class="menu__link font-small font-mRegular" href="#">Карта сайта</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-md-end align-items-center">
+                                <div class="font-small font-mRegular mr-3">Следите за нами:</div>
+                                <div class="d-flex align-items-center">
+                                    <a class="social-link" href="#">
+                                        <svg width="25" height="25">
+                                            <use xlink:href="#in"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="social-link" href="#">
+                                        <svg width="12" height="25">
+                                            <use xlink:href="#fb"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="social-link" href="#">
+                                        <svg width="27" height="15">
+                                            <use xlink:href="#yu"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></header>            <section class="offer" style="background-image: url('assets/img/offer-services.jpg');">
+                <div class="offer__in">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2 offer__content">
+                                <div class="section__title section__title--h1 tac">Услуги</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer__bottom">
+                    <div class="container">
+                        <div class="crumbs font-small">
+                            <a class="crumbs__item color-white" href="#">Главная</a>
+                            <span class="crumbs__item">Контакты</span>
+                        </div>
+            
+                        <button class="offer__scrolldown js-offer-scroll js-prevent-default">
+                            <svg width="29" height="15">
+                                <use xlink:href="#chevron"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="content">
+                <section class="section--wide py-0">
+                    <div class="section--padding">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 offset-xl-1">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Трансфер</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper.</p>
+                                    <button class="button mt-2 mt-md-3 mt-xl-4" data-src="#popup--call" data-fancybox>Подробнее</button>
+                                </div>
+                                <div class="col-xl-5 offset-xl-1 mt-4 mt-xl-0">
+                                    <div class="image image--small" style="background-image: url('assets/img/services-page-1.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--wide py-0">
+                    <div class="section--padding background-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 offset-xl-1 order-1 order-xl-2">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Корпоративное обслуживание</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget </p>
+                                    <button class="button mt-2 mt-md-3 mt-xl-4" data-src="#popup--call" data-fancybox>Подробнее</button>
+                                </div>
+                                <div class="col-xl-5 order-2 order-xl-1 mt-4 mt-xl-0 image--small__wrapper">
+                                    <div class="image image--small" style="background-image: url('assets/img/services-page-2.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--wide py-0">
+                    <div class="section--padding">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 offset-xl-1">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Бассейн</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper.</p>
+                                    <button class="button mt-2 mt-md-3 mt-xl-4" data-src="#popup--call" data-fancybox>Подробнее</button>
+                                </div>
+                                <div class="col-xl-5 offset-xl-1 mt-4 mt-xl-0">
+                                    <div class="image image--small" style="background-image: url('assets/img/services-page-3.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--wide py-0 with-pattern">
+                    <svg class="about__pattern">
+                        <use xlink:href="#pattern"></use>
+                    </svg>
+                    <div class="section--padding background-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-5 offset-xl-1 order-1 order-xl-2">
+                                    <div class="section__title section__title--h1 mb-3 mb-md-4 mb-xl-5">Уборка номера</div>
+                                    <p class="font-mRegular font-small lh-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis urna integer interdum tortor condimentum mi commodo eget. Eleifend et cras enim dignissim dolor vel non non ultricies. Tempor id nulla id dignissim mollis euismod eget ut. Eu cras tincidunt morbi dignissim feugiat ligula facilisi dolor. Duis varius vulputate molestie aliquet. Faucibus ornare etiam nisi, orci semper.</p>
+                                    <button class="button mt-2 mt-md-3 mt-xl-4" data-src="#popup--call" data-fancybox>Подробнее</button>
+                                </div>
+                                <div class="col-xl-5 order-2 order-xl-1 mt-4 mt-xl-0 image--small__wrapper">
+                                    <div class="image image--small" style="background-image: url('assets/img/services-page-4.jpg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="quote section--padding background-blueGray with-pattern">
+                    <svg class="quote__pattern">
+                        <use xlink:href="#pattern"></use>
+                    </svg>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 offset-xl-2">
+                                <div class="quote__text section__title section__title--h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section></div>
+            <footer class="footer font-small">
+                <div class="footer__top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-2 mb-3 mb-xl-0">
+                                <a class="footer__logo" href="#">
+                                    <svg class="footer__logo-icon" width="371" height="143">
+                                        <use xlink:href="#logo"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Об отеле</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Политика конфиденциальности</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Бронирования</a>
+                                    <a class="footer__link font-mRegular" href="#">Карта сайта</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Номера</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Ресторан</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Фитнес со SPA-зонами</a>
+                                    <a class="footer__link font-mRegular" href="#">Услуги</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4">
+                                <div class="footer__col">
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Мероприятия</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Контакты</a>
+                                    <a class="footer__link font-mRegular mb-1 mb-md-2" href="#">Карьера</a>
+                                    <a class="footer__link font-mRegular" href="#">Новости</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 mt-4 mt-xl-0">
+                                <div class="footer__col">
+                                    <div class=" mb-2 mb-md-3">Подписаться на новости</div>
+                                    <form class="footer__form mb-3 mb-md-4">
+                                        <input type="email" placeholder="E-mail">
+                                        <button class="button" type="submit">OK</button>
+                                    </form>
+            
+                                    <div class="mb-1 font-xsmall">ООО «Фарфор»</div>
+                                    <div class="mb-1 font-xsmall">ИНН 6670503240</div>
+                                    <div class="mb-1 font-xsmall">КПП 667001001</div>
+                                    <div class="font-xsmall">Юр. адрес: 620078, Свердловская область,
+                                        г.&nbsp;Екатеринбург, ул.&nbsp;Мира, стр&nbsp;39, ком&nbsp;22</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom font-small">
+                    <div class="container">
+                        <div class="footer__copyrights">© Не является публичной офертой. все права защищены. 2021</div>
+                        <div class="footer__social">
+                            <a class="social-link" href="#">
+                                <svg width="25" height="25">
+                                    <use xlink:href="#in"></use>
+                                </svg>
+                            </a>
+                            <a class="social-link" href="#">
+                                <svg width="12" height="25">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </a>
+                            <a class="social-link" href="#">
+                                <svg width="27" height="18">
+                                    <use xlink:href="#yu"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>        </div>
         <svg width="0" height="0" class="svg-sprite">
             <symbol id="logo" viewBox="0 0 371 143" xmlns="http://www.w3.org/2000/svg">
                 <path d="M181.2 48.2997V45.2997H184.6C186 45.2997 186.9 45.0997 187.4 44.5997C187.9 44.1997 188.1 43.2997 188.1 42.0997L188 7.59971C188 6.39971 187.8 5.59971 187.3 5.09971C186.8 4.69971 185.9 4.49971 184.5 4.49971H181.1V1.39971L219.1 1.19971L220 17.7997H217.2C216.8 15.0997 216.2 12.7997 215.4 10.8997C214.6 8.99971 213.7 7.49971 212.6 6.59971C211.6 5.79971 210.1 5.19971 208.3 4.79971C206.5 4.39971 203.9 4.29971 200.5 4.29971C198 4.29971 196.5 4.49971 195.9 4.99971C195.3 5.39971 195 6.29971 195 7.59971L195.1 22.4997H196C199.4 22.4997 201.8 21.7997 203.2 20.4997C204.6 19.1997 205.5 16.7997 205.8 13.4997H208.5L208.6 34.1997H205.9C205.6 30.7997 204.7 28.4997 203.3 27.1997C201.9 25.8997 199.5 25.2997 196.1 25.2997H195.2L195.3 42.1997C195.3 43.3997 195.5 44.2997 196 44.6997C196.5 45.0997 197.3 45.2997 198.7 45.2997H203V48.2997H181.2Z" />

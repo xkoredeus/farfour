@@ -3,6 +3,7 @@ $dark1: #222222;
 $dark2: #3C3C3C;
 $white: #ffffff;
 
+$darkGray: #777777;
 $blueGray: #6E8A99;
 $gray: #F3F5F6;
 $tr: transparent;
@@ -36,4 +37,8 @@ $tr: transparent;
   &:hover {
     color: $white;
   }
+}
+
+.color-darkGray {
+  color: $darkGray;
 }

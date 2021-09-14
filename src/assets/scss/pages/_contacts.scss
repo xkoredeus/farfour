@@ -1,0 +1,74 @@
+.contacts {
+  &__map {
+    height: 400px;
+
+    @include r(768) {
+      height: 300px;
+    }
+  }
+
+  &__address {
+    @include rmin(1200) {
+      line-height: 1.7;
+    }
+  }
+
+  &__form {
+    max-width: 570px;
+
+    &-policy {
+      max-width: 450px;
+    }
+  }
+}
+
+.balloon {
+  &__content {
+    position: relative;
+    padding-bottom: 10px;
+    transform: translateY(-50px) translateX(-10px);
+  }
+
+  &__in {
+    position: relative;
+    background-color: $white;
+    width: 200px;
+    height: 90px;
+    @include flex-center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+
+    @include r(1200) {
+      width: 140px;
+      height: 70px;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+
+      @include r(1200) {
+        width: 100px;
+        height: 60px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 15px;
+      background-color: $white;
+      transform: rotate(-45deg);
+      bottom: -6px;
+      left: 20px;
+    }
+  }
+}
+
+.mapboxgl-ctrl-logo {
+  z-index: -1 !important; // This is 1000 by default
+  position: absolute;
+  bottom: -200px;
+  pointer-events: none;
+}

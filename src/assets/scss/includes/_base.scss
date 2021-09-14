@@ -133,6 +133,13 @@ a {
           display: none;
         }
       }
+
+      &--right {
+        &::before {
+          right: auto;
+          left: 40%;
+        }
+      }
     }
   }
 
