@@ -18990,10 +18990,11 @@ $(() => {
     } else {
         const datepicker = $(".datepicker");
         datepicker.focus(function () {
-            this.type = "date";
+            this.type = 'date';
+            this.trigger('click');
         })
         datepicker.focusout(function () {
-            this.type = "text";
+            this.type = 'text';
         })
     }
 
