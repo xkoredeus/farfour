@@ -216,7 +216,7 @@ $(() => {
         const datepicker = $(".datepicker");
         datepicker.focus(function () {
             this.type = 'date';
-            this.trigger('click');
+            $(this).trigger('click');
         })
         datepicker.focusout(function () {
             this.type = 'text';

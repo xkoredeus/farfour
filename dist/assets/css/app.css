@@ -22452,6 +22452,12 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+input::-webkit-inner-spin-button,
+input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
