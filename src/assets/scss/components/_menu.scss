@@ -9,20 +9,24 @@
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
   @include ease-in-out;
 
+  @include r(576) {
+    min-height: 100vh;
+  }
+
   &__in {
     position: relative;
     padding: 180px 0 50px;
 
     @include r(1200) {
-      padding: 140px 0 30px;
+      padding: 90px 0 50px;
     }
 
     @include r(768) {
-      padding: 120px 0 30px;
+      padding: 70px 0 30px;
     }
 
     @include r(576) {
-      padding: 100px 0 40px;
+      padding: 60px 0 30px;
     }
   }
 
@@ -37,26 +41,57 @@
       }
 
       @include r(768) {
-        margin-bottom: 6px;
+        margin-bottom: 7px;
       }
     }
 
-    &-chevron {
-      stroke: $dark;
-      transform: rotate(90deg);
+    &-button {
+      position: relative;
+      width: 16px;
+      height: 16px;
       display: none;
-
       @include ease-in-out;
 
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        background-color: $dark;
+        @include ease-in-out;
+      }
+
+      &::before {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: calc(50% - 0.5px);
+      }
+
+      &::after {
+        height: 100%;
+        width: 1px;
+        left: calc(50% - 0.5px);
+        top: 0;
+      }
+
       &--active {
-        transform: rotate(90deg) scaleX(-1);
+        &::after {
+          opacity: 0;
+        }
       }
     }
 
     &-wrapper {
       @include r(768) {
-        .menu__link,
-        .menu__link-chevron {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu__link {
+          margin-right: 15px;
+          margin-bottom: 0;
+        }
+        //.menu__link,
+        .menu__link-button {
           display: inline-block;
         }
       }
@@ -66,6 +101,33 @@
   &__dropdown {
     @include r(768) {
       display: none;
+      padding-left: 15px;
+    }
+
+    &-wrapper {
+      @include r(576) {
+        padding: 15px 0;
+        border-bottom: 1px solid #F3F5F6;
+
+        &--bt {
+          border-top: 1px solid #F3F5F6;
+        }
+      }
+    }
+  }
+
+  &__language {
+    color: #A8A8A8;
+    padding-left: 0;
+    padding-right: 0;
+
+    &--active {
+      color: $dark;
+      border-bottom: 1px solid $dark;
+    }
+
+    &:first-child {
+      margin-right: 15px;
     }
   }
 }

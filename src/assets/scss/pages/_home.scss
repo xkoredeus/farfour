@@ -116,6 +116,12 @@
       border-bottom: none !important;
       max-width: 100%;
 
+      @include r(768) {
+        min-height: 41px;
+        width: 100%;
+        display: block;
+      }
+
       &::placeholder {
         color: $white !important;
       }
@@ -123,6 +129,10 @@
       &__wrapper {
         position: relative;
         max-width: 100%;
+
+        @include r(768) {
+          width: 100%;
+        }
 
         svg {
           position: absolute;
@@ -194,6 +204,35 @@
     }
   }
 
+  &-slider {
+    &__wrapper {
+      position: relative;
+    }
+
+    &__navigation {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      z-index: 1;
+
+      .swiper-button-prev {
+        margin-right: 25px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        border-color: $white;
+
+        svg {
+          stroke: $white;
+        }
+      }
+    }
+  }
+
   &__item {
     min-height: 600px;
     height: 80vh;
@@ -207,13 +246,13 @@
     @include cv;
 
     @include r(1200) {
-      padding: 30px 50px;
+      padding: 30px 50px 80px;
       height: auto;
       min-height: 300px;
     }
 
     @include r(768) {
-      padding: 30px 20px;
+      padding: 30px 20px 70px;
       height: auto;
       min-height: 200px;
     }

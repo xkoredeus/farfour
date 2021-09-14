@@ -18830,16 +18830,17 @@ $('.js-menu').on('click', function () {
     $(this).toggleClass('header__burger--active');
     $('.header').toggleClass('header--active');
     $('.burger').toggleClass('burger--active');
+    $('body').toggleClass('menu-open');
 });
 
 $('.js-toggle-menu-dropdown').on('click', function () {
-    if (!($(this).hasClass('menu__link-chevron--active'))) {
-        $('.menu__link-chevron').removeClass('menu__link-chevron--active');
+    if (!($(this).hasClass('menu__link-button--active'))) {
+        $('.menu__link-button').removeClass('menu__link-button--active');
         $('.menu__dropdown').slideUp();
-        $(this).toggleClass('menu__link-chevron--active');
+        $(this).toggleClass('menu__link-button--active');
         $(this).parent('.menu__link-wrapper').next('.menu__dropdown').slideToggle();
     } else {
-        $(this).removeClass('menu__link-chevron--active');
+        $(this).removeClass('menu__link-button--active');
         $(this).parent('.menu__link-wrapper').next('.menu__dropdown').slideUp();
     }
 });
@@ -18848,6 +18849,7 @@ const toggleMenu = () => {
     $('.header').removeClass('header--active');
     $(this).removeClass('header__burger--active');
     $('.burger').removeClass('burger--active');
+    $('body').removeClass('menu-open');
 };
 
 $(() => {
@@ -18894,6 +18896,23 @@ $(() => {
         gsap.to(window, {duration: 1.4, scrollTo: {y: '.content', offsetY: 50}});
     });
 })
+$(() => {
+    const directionsSlider = new Swiper(".js-directions-slider", {
+        navigation: {
+            nextEl: ".js-directions-slider-next",
+            prevEl: ".js-directions-slider-prev",
+        },
+        speed: 1000,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+        }
+    });
+});
 
 $(() => {
     const restSlider = new Swiper(".js-rest-slider", {
@@ -18950,7 +18969,7 @@ $(() => {
 $(() => {
     $('.quantity').on('click', '.quantity-minus, .quantity-plus', function quantityClick() {
         const input = $( this ).siblings( '.quantity-num' );
-        if ( (input.val() > 1) && ($( this ).hasClass( 'quantity-minus' ) ) ) {
+        if ( (input.val() > +input.attr('min')) && ($( this ).hasClass( 'quantity-minus' ) ) ) {
             input.val( +input.val() - 1 );
         } else if (  (input.val() < +input.attr('max') ) && ( $( this ).hasClass( 'quantity-plus' ) ) ) {
             input.val( +input.val() + 1 );

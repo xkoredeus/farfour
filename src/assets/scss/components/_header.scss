@@ -137,35 +137,28 @@
     color: $white;
     background-color: $dark;
     border-bottom-color: #2d2f2f;
-
-    & > .container {
-      transform: translateY(-13px);
-    }
-
-    &__logo {
-      top: -20px;
-      transform: translateX(-50%) scale(0.5);
-
-      @include r(1200) {
-        top: -12px;
-      }
-
-      @include r(576) {
-        top: -10px;
-        transform: translateX(-50%) scale(0.7);
-      }
-    }
   }
 }
 
 
-//.menu-open {
-//  .header__logo {
-//    top: 10px;
-//    transform: translateX(-50%);
-//
-//    @include r(576) {
-//      transform: translateX(-50%);
-//    }
-//  }
-//}
+.menu-open,
+.sticky-header {
+  .header {
+    & > .container {
+      transform: translateY(-13px);
+    }
+  }
+  .header__logo {
+    top: -20px;
+    transform: translateX(-50%) scale(0.5);
+
+    @include r(1200) {
+      top: -16px;
+    }
+
+    @include r(576) {
+      top: -10px;
+      transform: translateX(-50%) scale(0.7);
+    }
+  }
+}

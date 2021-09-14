@@ -25791,11 +25791,13 @@ a:hover {
   border-bottom-color: #2d2f2f;
 }
 
+.menu-open .header > .container,
 .sticky-header .header > .container {
   -webkit-transform: translateY(-13px);
           transform: translateY(-13px);
 }
 
+.menu-open .header__logo,
 .sticky-header .header__logo {
   top: -20px;
   -webkit-transform: translateX(-50%) scale(0.5);
@@ -25803,12 +25805,14 @@ a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+  .menu-open .header__logo,
   .sticky-header .header__logo {
-    top: -12px;
+    top: -16px;
   }
 }
 
 @media only screen and (max-width: 576px) {
+  .menu-open .header__logo,
   .sticky-header .header__logo {
     top: -10px;
     -webkit-transform: translateX(-50%) scale(0.7);
@@ -25992,6 +25996,12 @@ a:hover {
   transition: .6s all ease-in-out;
 }
 
+@media only screen and (max-width: 576px) {
+  .menu {
+    min-height: 100vh;
+  }
+}
+
 .menu__in {
   position: relative;
   padding: 180px 0 50px;
@@ -25999,19 +26009,19 @@ a:hover {
 
 @media only screen and (max-width: 1200px) {
   .menu__in {
-    padding: 140px 0 30px;
+    padding: 90px 0 50px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .menu__in {
-    padding: 120px 0 30px;
+    padding: 70px 0 30px;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .menu__in {
-    padding: 100px 0 40px;
+    padding: 60px 0 30px;
   }
 }
 
@@ -26031,27 +26041,62 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .menu__link:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 }
 
-.menu__link-chevron {
-  stroke: #181818;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.menu__link-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
   display: none;
   -webkit-transition: .6s all ease-in-out;
   transition: .6s all ease-in-out;
 }
 
-.menu__link-chevron--active {
-  -webkit-transform: rotate(90deg) scaleX(-1);
-          transform: rotate(90deg) scaleX(-1);
+.menu__link-button::before, .menu__link-button::after {
+  position: absolute;
+  content: '';
+  background-color: #181818;
+  -webkit-transition: .6s all ease-in-out;
+  transition: .6s all ease-in-out;
+}
+
+.menu__link-button::before {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: calc(50% - 0.5px);
+}
+
+.menu__link-button::after {
+  height: 100%;
+  width: 1px;
+  left: calc(50% - 0.5px);
+  top: 0;
+}
+
+.menu__link-button--active::after {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 768px) {
-  .menu__link-wrapper .menu__link,
-  .menu__link-wrapper .menu__link-chevron {
+  .menu__link-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu__link-wrapper .menu__link {
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+  .menu__link-wrapper .menu__link-button {
     display: inline-block;
   }
 }
@@ -26059,7 +26104,33 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .menu__dropdown {
     display: none;
+    padding-left: 15px;
   }
+}
+
+@media only screen and (max-width: 576px) {
+  .menu__dropdown-wrapper {
+    padding: 15px 0;
+    border-bottom: 1px solid #F3F5F6;
+  }
+  .menu__dropdown-wrapper--bt {
+    border-top: 1px solid #F3F5F6;
+  }
+}
+
+.menu__language {
+  color: #A8A8A8;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.menu__language--active {
+  color: #181818;
+  border-bottom: 1px solid #181818;
+}
+
+.menu__language:first-child {
+  margin-right: 15px;
 }
 
 .popup__container {
@@ -26485,6 +26556,14 @@ div.pagination ul.pagination li.control_next:hover a svg {
   max-width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  .offer__form .datepicker {
+    min-height: 41px;
+    width: 100%;
+    display: block;
+  }
+}
+
 .offer__form .datepicker::-webkit-input-placeholder {
   color: #ffffff !important;
 }
@@ -26504,6 +26583,12 @@ div.pagination ul.pagination li.control_next:hover a svg {
 .offer__form .datepicker__wrapper {
   position: relative;
   max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .offer__form .datepicker__wrapper {
+    width: 100%;
+  }
 }
 
 .offer__form .datepicker__wrapper svg {
@@ -26576,6 +26661,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 380px;
   fill: #B9B9B9;
   opacity: .2;
+  z-index: 1;
   top: -100px;
   right: -100px;
 }
@@ -26608,6 +26694,39 @@ div.pagination ul.pagination li.control_next:hover a svg {
   }
 }
 
+.directions-slider__wrapper {
+  position: relative;
+}
+
+.directions-slider__navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.directions-slider__navigation .swiper-button-prev {
+  margin-right: 25px;
+}
+
+.directions-slider__navigation .swiper-button-prev,
+.directions-slider__navigation .swiper-button-next {
+  border-color: #ffffff;
+}
+
+.directions-slider__navigation .swiper-button-prev svg,
+.directions-slider__navigation .swiper-button-next svg {
+  stroke: #ffffff;
+}
+
 .directions__item {
   min-height: 600px;
   height: 80vh;
@@ -26632,7 +26751,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 @media only screen and (max-width: 1200px) {
   .directions__item {
-    padding: 30px 50px;
+    padding: 30px 50px 80px;
     height: auto;
     min-height: 300px;
   }
@@ -26640,7 +26759,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 @media only screen and (max-width: 768px) {
   .directions__item {
-    padding: 30px 20px;
+    padding: 30px 20px 70px;
     height: auto;
     min-height: 200px;
   }
@@ -26674,6 +26793,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 380px;
   fill: #B9B9B9;
   opacity: .2;
+  z-index: 1;
   top: -100px;
   left: -100px;
 }
@@ -26850,6 +26970,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 380px;
   fill: #B9B9B9;
   opacity: .2;
+  z-index: 1;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -27134,6 +27255,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 380px;
   fill: #B9B9B9;
   opacity: .2;
+  z-index: 1;
   bottom: -20px;
   left: -100px;
 }
@@ -27358,6 +27480,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 380px;
   fill: #B9B9B9;
   opacity: .2;
+  z-index: 1;
   bottom: -100px;
   left: -100px;
   z-index: 1;

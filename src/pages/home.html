@@ -66,20 +66,50 @@
 </section>
 <div class="content">
     <section class="directions with-pattern">
-        <div class="row no-gutters">
-            <div class="col-md-6">
-                <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-1.jpg');">
-                    <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
-                        tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
-                    <a class="button button--white" href="#">Подробнее</a>
+        <div class="directions-slider__wrapper">
+            <div class="directions-slider js-directions-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-1.jpg');">
+                            <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
+                                tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+                            <a class="button button--white" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-2.jpg');">
+                            <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
+                                tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+                            <a class="button button--white" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-1.jpg');">
+                            <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
+                                tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+                            <a class="button button--white" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-2.jpg');">
+                            <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
+                                tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+                            <a class="button button--white" href="#">Подробнее</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="directions__item" style="background-image: url('{{root}}assets/img/direction-2.jpg');">
-                    <div class="section_subtitle color-white">Lorem ipsum dolor sit amet, consec-
-                        tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
-                    <a class="button button--white" href="#">Подробнее</a>
-                </div>
+            <div class="directions-slider__navigation">
+                <button class="directions-slider__navigation-button swiper-button-prev js-directions-slider-prev">
+                    <svg width="11" height="21">
+                        <use xlink:href="#chevron-left"></use>
+                    </svg>
+                </button>
+                <button class="directions-slider__navigation-button swiper-button-next js-directions-slider-next">
+                    <svg width="11" height="21">
+                        <use xlink:href="#chevron-right"></use>
+                    </svg>
+                </button>
             </div>
         </div>
         <svg class="directions__pattern">
