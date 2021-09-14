@@ -12,7 +12,9 @@
                 </span>
             </button>
             <a class="header__logo" href="#">
-                <img class="header__logo-picture" src="{{root}}assets/img/logo.png" alt="Logotype">
+                <svg class="header__logo-icon" width="371" height="143">
+                    <use xlink:href="#logo"></use>
+                </svg>
             </a>
             <div class="header__nav d-flex align-items-center font-small">
                 <a class="header__link mr-3 mr-md-4 d-none d-sm-inline" href="#">Контакты</a>
@@ -31,4 +33,5 @@
             </div>
         </div>
     </div>
+    {{> menu}}
 </header>

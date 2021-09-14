@@ -279,3 +279,28 @@ a {
     bottom: 0;
   }
 }
+
+.social-link {
+  @include hoverOpacity;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include r(1200) {
+      margin-right: 8px;
+    }
+
+    @include r(1200) {
+      margin-right: 5px;
+    }
+  }
+
+  svg {
+    max-height: 25px;
+
+    @include r(1200) {
+      max-height: 15px;
+      max-width: 17px;
+    }
+  }
+}

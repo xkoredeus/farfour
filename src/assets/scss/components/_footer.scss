@@ -9,7 +9,7 @@
 
   &__logo {
     @include hoverOpacity;
-    img {
+    &-icon {
       max-width: 175px;
       height: auto;
 
@@ -60,12 +60,6 @@
 
       top: 0;
       transform: translateY(0);
-    }
-
-    &-link {
-      &:not(:last-child) {
-        margin-right: 8px;
-      }
     }
   }
 }

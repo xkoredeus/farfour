@@ -10,6 +10,7 @@
   & > .container {
     position: relative;
     @include ease-in-out;
+    z-index: 1;
   }
 
   &__burger {
@@ -17,6 +18,7 @@
     display: flex;
     align-items: center;
     @include hoverOpacity;
+    padding-left: 0;
   }
 
   &__logo {
@@ -32,9 +34,11 @@
       top: 0;
     }
 
-    &-picture {
+    &-icon {
       max-width: 175px;
       height: auto;
+      fill: $white;
+      @include ease;
 
       @include r(1200) {
         max-width: 140px;
@@ -85,6 +89,47 @@
       @include ease-in-out;
     }
   }
+
+  &--active {
+    color: $dark;
+
+    .header {
+      &__logo-icon {
+        fill: $dark;
+      }
+
+      &__burger {
+        color: $dark;
+      }
+
+      &__nav {
+        .header__link {
+          color: $dark !important;
+        }
+
+        & > .header__link {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .header__language-icon {
+          stroke: $dark;
+        }
+      }
+    }
+
+    .burger {
+      &__line {
+        background: $dark;
+      }
+    }
+
+    .menu {
+      transform: translateY(0);
+    }
+  }
+
+
 }
 
 .sticky-header {
@@ -112,3 +157,15 @@
     }
   }
 }
+
+
+//.menu-open {
+//  .header__logo {
+//    top: 10px;
+//    transform: translateX(-50%);
+//
+//    @include r(576) {
+//      transform: translateX(-50%);
+//    }
+//  }
+//}

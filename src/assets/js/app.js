@@ -1,34 +1,43 @@
 $(() => {
-    $(window).on('load', function hidePreloader() {
-        $('.preloader__wrp').fadeOut();
-    });
-});
-
-$('.js-menu').on('click', function () {
-    $(this).toggleClass('header__burger--active');
-    $('.header').toggleClass('header--active');
-    $('.burger').toggleClass('burger--active');
-});
-
-$(() => {
-    $(document).on('click', function (e) {
-        var container = $('.header');
-
-        // if the target of the click isn't the container nor a descendant of the container
-        if (!container.is(e.target) && container.has(e.target).length === 0)
-        {
-            container.removeClass('header--active');
-            $(this).removeClass('header__burger--active');
-            $('.burger').removeClass('burger--active');
+    // offer
+    const offerAnimation = gsap.timeline({
+        defaults: {
+            ease: "power3.inOut"
+        },
+        paused: true,
+        scrollTrigger: {
+            trigger: '.banner',
+            start: "top center",
         }
+    });
 
+    offerAnimation.to('.offer__in', {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 1.2,
+        delay: 0.5
+    });
+
+    offerAnimation.to('.offer__bottom', {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 0.5,
+        delay: 0
+    });
+
+    // $(window).on('load', );
+    $(window).on('load', function () {
+
+        $('.preloader__wrp').fadeOut();
+
+        setTimeout(() => {
+            offerAnimation.play()
+        }, 500)
     });
 });
 
 $(() => {
-    $('.js-prevent-default').on('click', function (e) {
-        e.preventDefault();
-    });
+
 });
 
 $(() => {
@@ -39,6 +48,54 @@ $(() => {
         } else{
             $('body').removeClass('sticky-header');
         }
+    });
+});
+
+$('.js-menu').on('click', function () {
+    $(this).toggleClass('header__burger--active');
+    $('.header').toggleClass('header--active');
+    $('.burger').toggleClass('burger--active');
+});
+
+$('.js-toggle-menu-dropdown').on('click', function () {
+    if (!($(this).hasClass('menu__link-chevron--active'))) {
+        $('.menu__link-chevron').removeClass('menu__link-chevron--active');
+        $('.menu__dropdown').slideUp();
+        $(this).toggleClass('menu__link-chevron--active');
+        $(this).parent('.menu__link-wrapper').next('.menu__dropdown').slideToggle();
+    } else {
+        $(this).removeClass('menu__link-chevron--active');
+        $(this).parent('.menu__link-wrapper').next('.menu__dropdown').slideUp();
+    }
+});
+
+const toggleMenu = () => {
+    $('.header').removeClass('header--active');
+    $(this).removeClass('header__burger--active');
+    $('.burger').removeClass('burger--active');
+};
+
+$(() => {
+    $(window).on('mousewheel wheel', toggleMenu);
+    $(window).on('touchmove', toggleMenu);
+});
+
+$(() => {
+    $(document).on('click', function (e) {
+        var container = $('.header');
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0)
+        {
+            toggleMenu();
+        }
+
+    });
+});
+
+$(() => {
+    $('.js-prevent-default').on('click', function (e) {
+        e.preventDefault();
     });
 });
 
@@ -147,13 +204,24 @@ $(() => {
     };
     $.datepicker.setDefaults($.datepicker.regional['ru']);
 
-    $(".datepicker--in").datepicker({
-        minDate: 0
-    });
+    if ($(window).width() > 768) {
+        $(".datepicker--in").datepicker({
+            minDate: 0
+        });
 
-    $(".datepicker--out").datepicker({
-        minDate: 0
-    });
+        $(".datepicker--out").datepicker({
+            minDate: 0
+        });
+    } else {
+        const datepicker = $(".datepicker");
+        datepicker.focus(function () {
+            this.type = "date";
+        })
+        datepicker.focusout(function () {
+            this.type = "text";
+        })
+    }
+
 });
 
 //marquee
@@ -176,3 +244,47 @@ $(() => {
         ease: Linear.easeNone,
     });
 });
+
+$(() => {
+    gsap.utils.toArray('.content > section').forEach((el) => {
+
+        gsap.timeline({
+            defaults: {
+                ease: "power3.inOut",
+            },
+            scrollTrigger: {
+                trigger: el,
+                start: "top center",
+            }
+        })
+            .fromTo(el, 1, {
+                autoAlpha: 0,
+                // yPercent: 5,
+            }, {
+                autoAlpha: 1,
+                // yPercent: 0,
+            })
+    });
+
+    // offer
+    const footerAnimation = gsap.timeline({
+        defaults: {
+            ease: "power3.inOut"
+        },
+        indicators: true,
+        scrollTrigger: {
+            trigger: '.footer',
+            start: "top 70%",
+        }
+    });
+
+    footerAnimation.fromTo('.footer', 1, {
+            autoAlpha: 0,
+            yPercent: 5,
+        }, {
+            autoAlpha: 1,
+            yPercent: 0,
+        })
+});
+
+
