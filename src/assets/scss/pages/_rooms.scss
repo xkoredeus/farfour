@@ -1,0 +1,155 @@
+.rooms {
+  &-slider {
+    &__wrapper {
+      position: relative;
+
+      @include rmin(1200) {
+        width: calc(100% + 120px);
+
+        &--right {
+          left: -120px;
+
+          .rooms-slider__navigation {
+            left: auto;
+            right: 40px;
+          }
+        }
+      }
+    }
+
+    &__navigation {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      display: flex;
+      align-items: center;
+      color: $white;
+
+      @include r(768) {
+        left: 15px;
+        bottom: 15px;
+      }
+    }
+  }
+
+  &-picture {
+    width: 100%;
+    min-height: 743px;
+    @include cv;
+
+    @include r(1572) {
+      min-height: 500px;
+    }
+
+    @include r(1200) {
+      min-height: 300px;
+
+      max-width: 570px;
+    }
+
+    @include r(576) {
+      min-height: 220px;
+    }
+  }
+
+  &-card {
+    position: relative;
+    z-index: 2;
+    background-color: $gray;
+    padding: 60px 50px;
+
+    @include r(1572) {
+      padding: 45px 45px;
+    }
+
+    @include r(1200) {
+      padding: 25px 35px;
+    }
+
+    @include r(768) {
+      padding: 20px 15px;
+    }
+
+    &__rating {
+      filter: grayscale(.5);
+      opacity: .25;
+      width: 20px;
+      height: 20px;
+
+      @include r(768) {
+        width: 12px;
+        height: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 3px;
+
+        @include r(768) {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+.room-page {
+  &__rating {
+    filter: grayscale(.5);
+    opacity: .25;
+    width: 35px;
+    height: 35px;
+
+    @include r(768) {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3px;
+
+      @include r(768) {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &-slider {
+    &__wrapper {
+      position: relative;
+    }
+
+    &__navigation {
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      display: flex;
+      align-items: center;
+      color: $white;
+      transform: translateX(-50%);
+
+      @include r(768) {
+        bottom: 15px;
+      }
+    }
+  }
+
+  &-picture {
+    width: 100%;
+    min-height: 820px;
+    @include cv;
+
+    @include r(1572) {
+      min-height: 730px;
+    }
+
+    @include r(1200) {
+      min-height: 300px;
+
+      max-width: 570px;
+    }
+
+    @include r(576) {
+      min-height: 220px;
+    }
+  }
+}

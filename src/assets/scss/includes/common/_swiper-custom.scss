@@ -6,18 +6,20 @@
       border: 1px solid $dark;
       border-radius: 50%;
       width: 56px;
+      min-width: 56px;
       height: 56px;
-      opacity: .6;
       @include ease;
       @include flex-center;
 
       @include r(1572) {
         width: 40px;
+        min-width: 40px;
         height: 40px;
       }
 
       @include r(1200) {
         width: 30px;
+        min-width: 30px;
         height: 30px;
       }
 
@@ -41,6 +43,13 @@
 
       &.swiper-button-disabled {
         opacity: .1;
+      }
+
+      &.swiper-button--white {
+        border-color: $white;
+        svg {
+          stroke: $white;
+        }
       }
     }
 
@@ -74,4 +83,24 @@
       }
     }
   }
+}
+
+.swiper-pagination {
+  font-family: $font-mRegular;
+  font-size: $font-xregular;
+  position: relative;
+  bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @include r(768) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+.slider-navigation {
+  z-index: 2;
+  display: flex;
+  align-items: center;
 }

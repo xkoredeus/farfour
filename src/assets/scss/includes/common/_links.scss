@@ -5,4 +5,38 @@
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid $dark;
+
+  &-circle {
+    border: 1px solid $dark;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    @include ease;
+    @include flex-center;
+
+    @include r(1572) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include r(1200) {
+      width: 30px;
+      height: 30px;
+    }
+
+    svg {
+      stroke: $dark;
+      @include ease;
+      transform: translateX(-2px);
+
+      @include r(1200) {
+        max-height: 12px;
+        stroke-width: 2;
+      }
+
+      @include r(768) {
+        transform: translateX(-1px);
+      }
+    }
+  }
 }

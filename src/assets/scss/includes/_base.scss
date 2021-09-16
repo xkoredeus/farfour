@@ -311,3 +311,20 @@ a {
     }
   }
 }
+
+.list {
+  padding-left: 18px;
+  margin-bottom: 0;
+
+  &-item {
+    margin-bottom: 15px;
+
+    @include r(768) {
+      margin-bottom: 10px;
+    }
+
+    @include r(576) {
+      margin-bottom: 5px;
+    }
+  }
+}

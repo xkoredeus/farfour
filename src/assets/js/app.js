@@ -186,6 +186,73 @@ $(() => {
             },
         }
     });
+
+    $('.slider')
+});
+
+$(() => {
+    const roomsSlider1 = new Swiper(".js-rooms-slider-wrapper-1 .js-rooms-slider", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".js-rooms-slider-wrapper-1 .js-rooms-slider-next",
+            prevEl: ".js-rooms-slider-wrapper-1 .js-rooms-slider-prev",
+        },
+        pagination: {
+            el: ".js-rooms-slider-wrapper-1 .js-rooms-slider__pagination",
+            type: "fraction",
+        },
+        speed: 1000,
+    });
+    const roomsSlider2 = new Swiper(".js-rooms-slider-wrapper-2 .js-rooms-slider", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".js-rooms-slider-wrapper-2 .js-rooms-slider-next",
+            prevEl: ".js-rooms-slider-wrapper-2 .js-rooms-slider-prev",
+        },
+        pagination: {
+            el: ".js-rooms-slider-wrapper-2 .js-rooms-slider__pagination",
+            type: "fraction",
+        },
+        speed: 1000,
+    });
+    const roomsSlider3 = new Swiper(".js-rooms-slider-wrapper-3 .js-rooms-slider", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".js-rooms-slider-wrapper-3 .js-rooms-slider-next",
+            prevEl: ".js-rooms-slider-wrapper-3 .js-rooms-slider-prev",
+        },
+        pagination: {
+            el: ".js-rooms-slider-wrapper-3 .js-rooms-slider__pagination",
+            type: "fraction",
+        },
+        speed: 1000,
+    });
+    const roomsSlider4 = new Swiper(".js-rooms-slider-wrapper-4 .js-rooms-slider", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".js-rooms-slider-wrapper-4 .js-rooms-slider-next",
+            prevEl: ".js-rooms-slider-wrapper-4 .js-rooms-slider-prev",
+        },
+        pagination: {
+            el: ".js-rooms-slider-wrapper-4 .js-rooms-slider__pagination",
+            type: "fraction",
+        },
+        speed: 1000,
+    });
+
+
+    const roomSlider = new Swiper(".js-room-page-slider", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".js-room-page-slider-next",
+            prevEl: ".js-room-page-slider-prev",
+        },
+        pagination: {
+            el: ".js-room-page-slider__pagination",
+            type: "fraction",
+        },
+        speed: 1000,
+    });
 });
 
 // console.log(mdc)

@@ -187,6 +187,30 @@
       max-width: 60%;
     }
   }
+
+  &__nav {
+    &-link {
+      @include r(768) {
+        margin-bottom: 8px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 65px;
+
+        @include r(1572) {
+          margin-right: 45px;
+        }
+
+        @include r(1200) {
+          margin-right: 25px;
+        }
+
+        @include r(768) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
 }
 
 .directions {
