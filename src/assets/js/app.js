@@ -22,8 +22,7 @@ $(() => {
         autoAlpha: 1,
         yPercent: 0,
         duration: 0.5,
-        delay: 0
-    });
+    }, "-=1");
 
     // $(window).on('load', );
     $(window).on('load', function () {
@@ -345,7 +344,7 @@ $(() => {
             }
         })
             .fromTo(el, 1, {
-                autoAlpha: 0,
+                autoAlpha: 0.13,
                 // yPercent: 5,
             }, {
                 autoAlpha: 1,
@@ -366,7 +365,7 @@ $(() => {
     });
 
     footerAnimation.fromTo('.footer', 1, {
-            autoAlpha: 0,
+            autoAlpha: 0.15,
             yPercent: 5,
         }, {
             autoAlpha: 1,
