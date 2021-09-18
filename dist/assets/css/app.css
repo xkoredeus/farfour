@@ -26101,6 +26101,7 @@ a:hover {
   .footer__social {
     position: relative;
     margin-top: 15px;
+    right: 0;
     top: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -26780,9 +26781,10 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 @media only screen and (max-width: 768px) {
   .offer__form .datepicker {
-    min-height: 41px;
+    min-height: 46.4px;
     width: 100%;
     display: block;
+    padding-right: 12px;
   }
 }
 
@@ -27291,7 +27293,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   right: calc(100% + 50px);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .quote__text::before {
     top: -30px;
     right: auto;
@@ -27312,7 +27314,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   right: 0;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .quote__text::after {
     bottom: -30px;
     right: auto;

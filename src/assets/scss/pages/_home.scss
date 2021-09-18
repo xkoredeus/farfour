@@ -126,9 +126,10 @@
       max-width: 100%;
 
       @include r(768) {
-        min-height: 41px;
+        min-height: 46.4px;
         width: 100%;
         display: block;
+        padding-right: 12px;
       }
 
       &::placeholder {
@@ -473,7 +474,7 @@
       top: 50px;
       right: calc(100% + 50px);
 
-      @include r(1200) {
+      @include r(1300) {
         top: -30px;
         right: auto;
         left: 50%;
@@ -489,7 +490,7 @@
       bottom: 0;
       right: 0;
 
-      @include r(1200) {
+      @include r(1300) {
         bottom: -30px;
         right: auto;
         left: 50%;
