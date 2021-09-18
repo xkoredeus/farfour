@@ -22747,18 +22747,18 @@ input[type="radio"]:checked + .checkbox__text::before {
 }
 
 .section__title--h1 {
-  font-size: 3.2rem;
+  font-size: 2.9rem;
 }
 
 @media only screen and (max-width: 1520px) {
   .section__title--h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
 @media only screen and (max-width: 960px) {
   .section__title--h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -22775,7 +22775,7 @@ input[type="radio"]:checked + .checkbox__text::before {
 }
 
 .section__title--h2 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 1520px) {
@@ -25811,6 +25811,35 @@ a:hover {
   }
 }
 
+.menu-item {
+  min-height: 560px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 1572px) {
+  .menu-item {
+    min-height: 470px;
+    padding-bottom: 45px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .menu-item {
+    min-height: 340px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-item {
+    min-height: 220px;
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -27806,6 +27835,10 @@ div.pagination ul.pagination li.control_next:hover a svg {
   pointer-events: none;
 }
 
+.mapboxgl-marker {
+  background: none !important;
+}
+
 .rooms-slider__wrapper {
   position: relative;
 }
@@ -27995,4 +28028,27 @@ div.pagination ul.pagination li.control_next:hover a svg {
   .room-page-picture {
     min-height: 220px;
   }
+}
+
+.unknown {
+  height: 100vh;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.unknown__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.unknown .offer {
+  min-height: auto;
+  height: 100%;
 }
