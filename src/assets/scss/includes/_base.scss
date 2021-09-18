@@ -81,7 +81,6 @@ a {
   flex-wrap: wrap;
 
   &__item {
-
     &:not(:last-child) {
       &:hover {
         color: $white;
@@ -325,6 +324,29 @@ a {
 
     @include r(576) {
       margin-bottom: 5px;
+    }
+  }
+}
+
+.menu {
+  &-item {
+    min-height: 560px;
+    @include cv;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 60px;
+
+    @include r(1572) {
+      min-height: 470px;
+      padding-bottom: 45px;
+    }
+
+    @include r(1200) {
+      min-height: 340px;
+    }
+
+    @include r(768) {
+      min-height: 220px;
     }
   }
 }

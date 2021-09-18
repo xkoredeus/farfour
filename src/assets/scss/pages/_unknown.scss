@@ -1,20 +1,17 @@
 .unknown {
-  &__text {
-    font-size: 1.2rem;
-    margin-top: 70px;
+  height: 100vh;
+  min-height: 700px;
 
-    @include r(600) {
-      margin-top: 50px;
-      font-size: 1rem;
-    }
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    flex-grow: 1;
   }
 
-  &__icon {
-    max-width: 100%;
-    height: auto;
 
-    &-wrapper {
-      position: relative;
-    }
+  .offer {
+    min-height: auto;
+    height: 100%;
   }
 }
