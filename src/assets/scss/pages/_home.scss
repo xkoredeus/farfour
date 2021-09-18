@@ -130,6 +130,13 @@
         width: 100%;
         display: block;
         padding-right: 12px;
+        -webkit-appearance: none;
+      }
+
+      @include r(576) {
+        max-width: 100px;
+        padding-right: 0;
+        margin: auto
       }
 
       &::placeholder {
@@ -151,6 +158,10 @@
           transform: translateY(-50%);
           stroke: $white;
           stroke-width: 2;
+
+          @include r(576) {
+            right: 15px;
+          }
         }
       }
     }

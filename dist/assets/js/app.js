@@ -19081,17 +19081,9 @@ $(() => {
 
     if ($(window).width() <= 768) {
         const datepicker = document.querySelectorAll('.js-datepicker');
-        console.log(datepicker);
-
         for (let i = 0; i < datepicker.length;  i++) {
-            console.log(i)
             datepicker[i].setAttribute('type', 'date');
         }
-        // $(".js-datepicker").setAttribute('type', 'text');
-
-        // datepicker.setAttribute('type', 'number');
-
-        // console.log($(".js-datepicker").attr('type')
     }
 
 });
