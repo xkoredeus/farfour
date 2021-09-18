@@ -26601,11 +26601,6 @@ div.pagination ul.pagination li.control_next:hover a svg {
 .offer {
   position: relative;
   color: #ffffff;
-  background-color: #181818;
-  background-image: url("../img/offer-bg.jpg");
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26618,6 +26613,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
           justify-content: space-between;
   min-height: 600px;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .offer--main {
@@ -26639,6 +26635,20 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 .offer--main .offer__scrolldown {
   margin-bottom: 0;
+}
+
+.offer__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #181818;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .offer__in {
@@ -26670,7 +26680,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   height: 100%;
   left: 50%;
   top: 50%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.25);
   -webkit-filter: blur(45px);
           filter: blur(45px);
   -webkit-transform: translate(-50%, -50%);
@@ -28031,8 +28041,6 @@ div.pagination ul.pagination li.control_next:hover a svg {
 }
 
 .unknown {
-  height: 100vh;
-  min-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28040,6 +28048,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 90vh;
 }
 
 .unknown__body {
@@ -28051,4 +28060,12 @@ div.pagination ul.pagination li.control_next:hover a svg {
 .unknown .offer {
   min-height: auto;
   height: 100%;
+}
+
+.unknown .footer__bottom {
+  display: none;
+}
+
+.unknown .footer__form-wrapper {
+  display: none;
 }

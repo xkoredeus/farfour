@@ -18786,12 +18786,17 @@ $(() => {
         }
     });
 
+    offerAnimation.to('.offer__background', {
+        scale: 1,
+        duration: 1.5,
+        delay: 0
+    });
+
     offerAnimation.to('.offer__in', {
         autoAlpha: 1,
         yPercent: 0,
         duration: 1.2,
-        delay: 0.5
-    });
+    }, "-=1");
 
     offerAnimation.to('.offer__bottom', {
         autoAlpha: 1,

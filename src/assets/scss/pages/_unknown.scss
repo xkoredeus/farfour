@@ -1,9 +1,7 @@
 .unknown {
-  height: 100vh;
-  min-height: 700px;
-
   display: flex;
   flex-direction: column;
+  height: 90vh;
 
   &__body {
     flex-grow: 1;
@@ -13,5 +11,12 @@
   .offer {
     min-height: auto;
     height: 100%;
+  }
+
+  .footer__bottom {
+    display: none;
+  }
+  .footer__form-wrapper {
+    display: none;
   }
 }
