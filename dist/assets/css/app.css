@@ -26794,29 +26794,15 @@ div.pagination ul.pagination li.control_next:hover a svg {
     min-height: 46.4px;
     display: block;
     -webkit-appearance: none;
-  }
-}
-
-.offer__form .datepicker-label {
-  position: absolute;
-  content: 'Выберите';
-  left: 50%;
-  top: 50%;
-  color: #ffffff;
-  font-size: 0.72rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-@media only screen and (min-width: 768px) {
-  .offer__form .datepicker-label {
-    display: none;
+    padding-right: 0 !important;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
 @media only screen and (max-width: 576px) {
   .offer__form .datepicker {
-    max-width: 70px;
+    max-width: 90px;
   }
 }
 
@@ -26834,6 +26820,23 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 .offer__form .datepicker::placeholder {
   color: #ffffff !important;
+}
+
+.offer__form .datepicker-label {
+  position: absolute;
+  content: 'Выберите';
+  left: 50%;
+  top: 50%;
+  color: #ffffff;
+  font-size: 0.72rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .offer__form .datepicker-label {
+    display: none;
+  }
 }
 
 .offer__form .datepicker__wrapper {

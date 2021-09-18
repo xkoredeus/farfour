@@ -132,6 +132,16 @@
         min-height: 46.4px;
         display: block;
         -webkit-appearance: none;
+        padding-right: 0 !important;
+        transform: translateX(10px);
+      }
+
+      @include r(576) {
+        max-width: 90px;
+      }
+
+      &::placeholder {
+        color: $white !important;
       }
 
       &-label {
@@ -146,14 +156,6 @@
         @include rmin(768) {
           display: none;
         }
-      }
-
-      @include r(576) {
-        max-width: 70px;
-      }
-
-      &::placeholder {
-        color: $white !important;
       }
 
       &__wrapper {
