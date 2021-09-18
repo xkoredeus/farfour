@@ -124,19 +124,14 @@
       padding: 12px 0;
       border-bottom: none !important;
       max-width: 100%;
-
       @include r(768) {
-        min-height: 46.4px;
         width: 100%;
-        display: block;
-        padding-right: 12px;
-        -webkit-appearance: none;
-      }
-
-      @include r(576) {
-        max-width: 100px;
+        max-width: 70px;
         padding-right: 0;
-        margin: auto
+        margin: auto;
+        min-height: 46.4px;
+        display: block;
+        -webkit-appearance: none;
       }
 
       &::placeholder {
@@ -159,8 +154,8 @@
           stroke: $white;
           stroke-width: 2;
 
-          @include r(576) {
-            right: 15px;
+          @include r(768) {
+            right: 26px;
           }
         }
       }

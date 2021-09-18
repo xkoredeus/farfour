@@ -22470,8 +22470,14 @@ input::-webkit-inner-spin-button {
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
   -webkit-appearance: none;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 input[type="number"] {
@@ -26781,19 +26787,13 @@ div.pagination ul.pagination li.control_next:hover a svg {
 
 @media only screen and (max-width: 768px) {
   .offer__form .datepicker {
-    min-height: 46.4px;
     width: 100%;
-    display: block;
-    padding-right: 12px;
-    -webkit-appearance: none;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .offer__form .datepicker {
-    max-width: 100px;
+    max-width: 70px;
     padding-right: 0;
     margin: auto;
+    min-height: 46.4px;
+    display: block;
+    -webkit-appearance: none;
   }
 }
 
@@ -26834,9 +26834,9 @@ div.pagination ul.pagination li.control_next:hover a svg {
   stroke-width: 2;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .offer__form .datepicker__wrapper svg {
-    right: 15px;
+    right: 26px;
   }
 }
 

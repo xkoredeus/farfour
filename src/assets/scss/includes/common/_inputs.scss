@@ -46,9 +46,16 @@ input::-webkit-inner-spin-button {
 }
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
   -webkit-appearance: none;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
+
+input[type="date"]::-webkit-input-placeholder{
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
