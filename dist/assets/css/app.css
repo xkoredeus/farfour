@@ -26777,6 +26777,7 @@ div.pagination ul.pagination li.control_next:hover a svg {
 }
 
 .offer__form .datepicker {
+  position: relative;
   text-align: center;
   color: #ffffff !important;
   border-color: #ffffff !important;
@@ -26788,12 +26789,34 @@ div.pagination ul.pagination li.control_next:hover a svg {
 @media only screen and (max-width: 768px) {
   .offer__form .datepicker {
     width: 100%;
-    max-width: 70px;
-    padding-right: 0;
+    max-width: 100px;
     margin: auto;
     min-height: 46.4px;
     display: block;
     -webkit-appearance: none;
+  }
+}
+
+.offer__form .datepicker-label {
+  position: absolute;
+  content: 'Выберите';
+  left: 50%;
+  top: 50%;
+  color: #ffffff;
+  font-size: 0.72rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .offer__form .datepicker-label {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .offer__form .datepicker {
+    max-width: 70px;
   }
 }
 
@@ -26835,6 +26858,12 @@ div.pagination ul.pagination li.control_next:hover a svg {
 }
 
 @media only screen and (max-width: 768px) {
+  .offer__form .datepicker__wrapper svg {
+    right: -14px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
   .offer__form .datepicker__wrapper svg {
     right: 26px;
   }

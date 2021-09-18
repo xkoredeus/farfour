@@ -118,6 +118,7 @@
     }
 
     .datepicker {
+      position: relative;
       text-align: center;
       color: $white !important;
       border-color: $white !important;
@@ -126,12 +127,29 @@
       max-width: 100%;
       @include r(768) {
         width: 100%;
-        max-width: 70px;
-        padding-right: 0;
+        max-width: 100px;
         margin: auto;
         min-height: 46.4px;
         display: block;
         -webkit-appearance: none;
+      }
+
+      &-label {
+        position: absolute;
+        content: 'Выберите';
+        left: 50%;
+        top: 50%;
+        color: $white;
+        font-size: $font-small;
+        transform: translate(-50%, -50%);
+
+        @include rmin(768) {
+          display: none;
+        }
+      }
+
+      @include r(576) {
+        max-width: 70px;
       }
 
       &::placeholder {
@@ -155,6 +173,10 @@
           stroke-width: 2;
 
           @include r(768) {
+            right: -14px;
+          }
+
+          @include r(576) {
             right: 26px;
           }
         }

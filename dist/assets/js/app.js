@@ -19084,9 +19084,32 @@ $(() => {
         for (let i = 0; i < datepicker.length;  i++) {
             datepicker[i].setAttribute('type', 'date');
         }
+
+        $('.js-datepicker').focus(function () {
+            $(this).siblings('.datepicker-label').css('opacity', '0');
+        });
+
+        $('.js-datepicker').focusout(function (e) {
+            if (e.target.value !== '') {
+                $(this).siblings('.datepicker-label').css('opacity', '0');
+            } else {
+                $(this).siblings('.datepicker-label').css('opacity', '1');
+            }
+        });
+        $('.js-datepicker').change(function (e) {
+            console.log(e.target.value);
+        })
     }
 
 });
+
+
+
+
+
+// $('input[type=date]').change(function (e) {
+//     this.form.submit();
+// });
 
 //marquee
 $(() => {
